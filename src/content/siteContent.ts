@@ -13,9 +13,9 @@ export const navLinks = [
 ];
 
 export const heroContent = {
-  eyebrow: "Art lessons and gallery · Naperville",
+  eyebrow: "Art Lessons and Gallery · Naperville",
   title: "Walk in curious. Walk out proud of what you made.",
-  body: "Radiant Hues is Gayathri Suresh's studio for people who think they are not artistic yet—and for anyone who already is. You get patient, step-by-step teaching; room to explore Kerala-inspired color and stories; and classmates who cheer when your piece goes on the wall. No jargon, no pressure—just real skills and a teacher who believes art is for everyone. Peek at the gallery, then send a note. If you are willing to try, you are exactly who we built this for.",
+  body: "Patient teaching. Kerala-inspired color. A teacher who believes art is for everyone. No jargon, no pressure—just real skills and classmates who cheer when your piece goes on the wall.",
   ctaPrimary: { href: "/gallery", label: "See the gallery" },
   ctaSecondary: { href: "/contact", label: "Say hello / book a class" }
 };
@@ -41,12 +41,12 @@ export const featuredWorks = [
 export const galleryCollections = [
   {
     name: "Personal Portfolio",
-    description: "Original works inspired by Kerala landscapes, festivals, and devotional iconography.",
+    description: "Kerala-inspired works celebrating landscapes, festivals, and devotional art.",
     works: featuredWorks
   },
   {
     name: "Student Showcase",
-    description: "Curated student artworks focused on color confidence, storytelling, and technique.",
+    description: "Curated works showcasing color confidence and creative storytelling.",
     works: [
       {
         title: "Student piece I",

@@ -2,12 +2,16 @@ import Link from "next/link";
 import { ArtworkGrid } from "@/components/ArtworkGrid";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { SectionHeading } from "@/components/SectionHeading";
+import { PaintSplatter } from "@/components/PaintSplatter";
+import { KeralaPattern } from "@/components/KeralaPattern";
+import { GalleryCarousel } from "@/components/GalleryCarousel";
 import { featuredWorks, heroContent } from "@/content/siteContent";
 
 export default function HomePage() {
   return (
     <>
       <section className="hero">
+        <PaintSplatter />
         <div className="container">
           <div className="hero-grid">
             <div>
@@ -24,21 +28,25 @@ export default function HomePage() {
               </div>
             </div>
             <div className="hero-image-wrap">
-              <MediaPlaceholder label="Hero artwork — replace with your image" variant="hero" />
+              <GalleryCarousel />
             </div>
           </div>
         </div>
       </section>
 
+      <KeralaPattern />
+
       <section className="section">
         <div className="container">
           <SectionHeading
             title="Featured Works"
-            intro="A curated blend of professional works and student brilliance inspired by Kerala color palettes."
+            intro="Professional artworks and student brilliance inspired by Kerala's vibrant palette."
           />
           <ArtworkGrid items={featuredWorks} />
         </div>
       </section>
+
+      <KeralaPattern />
 
       <section className="section feature-band">
         <div className="container feature-grid">
@@ -48,7 +56,7 @@ export default function HomePage() {
           <div>
             <SectionHeading
               title="Where Tradition Meets Contemporary Learning"
-              intro="From temple tones and monsoon skies to floral vibrancy and festive symbolism, each lesson and artwork is designed to celebrate both technique and cultural storytelling."
+              intro="From temple tones and monsoon skies to floral vibrancy and festive symbolism—each lesson celebrates technique and cultural storytelling."
             />
           </div>
         </div>

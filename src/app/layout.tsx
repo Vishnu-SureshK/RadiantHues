@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { CanvasTexture } from "@/components/CanvasTexture";
 import { siteConfig } from "@/content/siteContent";
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <CanvasTexture />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

@@ -27,7 +27,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         <div>
           <h1 className="page-title">Contact</h1>
           <p className="page-intro">
-            Interested in art lessons or purchasing an artwork? Share your details and we will get back to you quickly.
+            Interested in lessons or commissioning a piece? Let&apos;s connect.
           </p>
           <div className="contact-image">
             <MediaPlaceholder label="Featured artwork — add an image for this section" variant="card" />

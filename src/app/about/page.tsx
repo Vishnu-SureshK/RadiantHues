@@ -16,16 +16,13 @@ export default function AboutPage() {
         <div>
         <h1 className="page-title">About Radiant Hues</h1>
         <p>
-          Radiant Hues is led by Gayathri Suresh, a passionate art teacher and artist based in Naperville. Her work draws
-          from Kerala&apos;s visual richness: nature, ritual, devotion, and everyday color.
+          Led by Gayathri Suresh, Radiant Hues draws from Kerala&apos;s visual richness—nature, ritual, devotion, and vibrant color.
         </p>
         <p>
-          The studio&apos;s teaching approach is rooted in exploration. Students are guided to build confidence in drawing,
-          composition, and color while discovering their own artistic voice in a welcoming and inclusive environment.
+          Students build confidence in drawing, composition, and color while discovering their own artistic voice in a welcoming environment.
         </p>
         <p>
-          Radiant Hues serves beginners and experienced learners alike, with a focus on expressive storytelling through art
-          that can heal, celebrate, and connect communities across generations.
+          For beginners and experienced artists alike. Art that heals, celebrates, and connects.
         </p>
         </div>
       </div>

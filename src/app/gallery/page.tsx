@@ -15,7 +15,7 @@ export default function GalleryPage() {
       <div className="container">
         <h1 className="page-title">Gallery</h1>
         <p className="page-intro">
-          Explore a Kerala-themed blend of professional and student artworks with vibrant palettes and rich narrative detail.
+          A curated blend of professional works and student brilliance inspired by Kerala color palettes.
         </p>
         <div className="gallery-banner">
           <MediaPlaceholder label="Gallery banner — add your hero collage or feature piece" variant="banner" />
