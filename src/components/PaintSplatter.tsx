@@ -42,7 +42,7 @@ type Drip = {
 
 export function PaintSplatter() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
   const splattersRef = useRef<Splatter[]>([]);
   const dripsRef = useRef<Drip[]>([]);
 

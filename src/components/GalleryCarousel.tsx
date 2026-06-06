@@ -50,7 +50,7 @@ export function GalleryCarousel() {
   const [shuffledImages] = useState<ArtworkImage[]>(() =>
     [...GALLERY_IMAGES].sort(() => Math.random() - 0.5)
   );
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   // Auto-advance carousel
   useEffect(() => {
