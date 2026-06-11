@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
@@ -11,7 +11,14 @@ export default function AboutPage() {
     <section className="section">
       <div className="container prose about-grid">
         <div className="about-image">
-          <MediaPlaceholder label="Artist portrait — add your photo" variant="portrait" />
+          <Image
+            src="/images/gayathri-portrait.webp"
+            alt="Gayathri Suresh, founder and art teacher at Radiant Hues"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            style={{ objectFit: "cover" }}
+            priority
+          />
         </div>
         <div>
         <h1 className="page-title">About Radiant Hues</h1>
