@@ -23,13 +23,13 @@ export default function AboutPage() {
         <div>
         <h1 className="page-title">About Radiant Hues and Gayathri Suresh</h1>
         <p>
-          Led by Gayathri Suresh, Radiant Hues draws from Kerala&apos;s visual richness—nature, ritual, devotion, and vibrant color.
+          Gayathri Suresh is a passionate art teacher from Naperville, Illinois. She always explores new styles and techniques and loves sharing her knowledge with her students. Gayathri believes that art is for everyone, and she strives to create a welcoming and inclusive environment for all her students.
         </p>
         <p>
-          Students build confidence in drawing, composition, and color while discovering their own artistic voice in a welcoming environment.
+          Gayathri&apos;s teaching philosophy is based on the idea that art is a process of exploration and discovery. She encourages her students to experiment and to find their own unique voice. Gayathri also believes that art is a powerful tool for communication and self-expression. She helps her students develop their artistic skills to use art to share their stories and perspectives with the world.
         </p>
         <p>
-          For beginners and experienced artists alike. Art that heals, celebrates, and connects.
+          Gayathri is a highly skilled and experienced art teacher. She has taught students of all ages and skill levels, from beginners to experienced artists. Gayathri is passionate about using art to help people of all ages to heal, grow, and express themselves.
         </p>
         </div>
       </div>
