@@ -21,7 +21,7 @@ export default function AboutPage() {
           />
         </div>
         <div>
-        <h1 className="page-title">About Radiant Hues</h1>
+        <h1 className="page-title">About Radiant Hues and Gayathri Suresh</h1>
         <p>
           Led by Gayathri Suresh, Radiant Hues draws from Kerala&apos;s visual richness—nature, ritual, devotion, and vibrant color.
         </p>
