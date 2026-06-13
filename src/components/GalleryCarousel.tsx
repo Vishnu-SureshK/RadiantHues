@@ -46,11 +46,13 @@ const GALLERY_IMAGES: ArtworkImage[] = [
 export function GalleryCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  // Initialize with shuffled images immediately
-  const [shuffledImages] = useState<ArtworkImage[]>(() =>
-    [...GALLERY_IMAGES].sort(() => Math.random() - 0.5)
-  );
+  // Start with the unshuffled order so server and client markup match, then shuffle after mount
+  const [shuffledImages, setShuffledImages] = useState<ArtworkImage[]>(GALLERY_IMAGES);
   const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
+
+  useEffect(() => {
+    setShuffledImages([...GALLERY_IMAGES].sort(() => Math.random() - 0.5));
+  }, []);
 
   // Auto-advance carousel
   useEffect(() => {
