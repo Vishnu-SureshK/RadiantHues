@@ -51,6 +51,8 @@ export function GalleryCarousel() {
   const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   useEffect(() => {
+    // One-time client-only shuffle to avoid SSR/client hydration mismatch
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShuffledImages([...GALLERY_IMAGES].sort(() => Math.random() - 0.5));
   }, []);
 
