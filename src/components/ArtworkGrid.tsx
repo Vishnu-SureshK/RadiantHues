@@ -19,7 +19,7 @@ export function ArtworkGrid({ items }: ArtworkGridProps) {
         <article className="art-card" key={`${item.title}-${index}`}>
           <div className="art-image-wrap">
             {item.image ? (
-              <Image src={item.image} alt={item.title} fill sizes="(max-width: 960px) 100vw, 33vw" />
+              <Image src={item.image} alt={item.title} fill sizes="(max-width: 960px) 100vw, 33vw" style={{ objectFit: "contain" }} />
             ) : (
               <MediaPlaceholder label={`${item.title} — add your image`} variant="card" />
             )}

@@ -490,7 +490,8 @@ h1 {
 .art-image-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
+  background: #f5f2ed;
 }
 
 .art-copy {
