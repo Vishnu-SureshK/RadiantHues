@@ -22,19 +22,22 @@ export const heroContent = {
 
 export const featuredWorks = [
   {
-    title: "Featured work I",
-    medium: "Add medium and details",
-    year: "—"
+    title: "Rainy Evening Walk",
+    medium: "Acrylic on canvas",
+    year: "2020",
+    image: "/images/artwork-rainy-evening.webp"
   },
   {
-    title: "Featured work II",
-    medium: "Add medium and details",
-    year: "—"
+    title: "Golden Marsh at Dusk",
+    medium: "Watercolor on paper",
+    year: "2020",
+    image: "/images/artwork-autumn-landscape.webp"
   },
   {
-    title: "Featured work III",
-    medium: "Add medium and details",
-    year: "—"
+    title: "Kerala Nilavilakku",
+    medium: "Acrylic on canvas",
+    year: "2020",
+    image: "/images/artwork-kerala-lamp.webp"
   }
 ];
 
