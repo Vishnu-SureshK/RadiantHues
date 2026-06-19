@@ -40,7 +40,7 @@ export const featuredWorks = [
     image: "/images/artwork-kerala-lamp.webp"
   },
   {
-    title: "Hot Air Balloons",
+    title: "RadheKrishna",
     medium: "Acrylic on canvas",
     year: "2020",
     image: "/images/artwork-hot-air-balloons.jpg"
