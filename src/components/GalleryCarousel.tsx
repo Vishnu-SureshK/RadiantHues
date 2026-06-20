@@ -22,7 +22,7 @@ const GALLERY_IMAGES: ArtworkImage[] = [
   },
   {
     src: '/images/artwork-kerala-lamp.webp',
-    title: 'Kerala Nilavilakku',
+    title: 'Evening Bliss',
     artist: '(Description)'
   },
   {

@@ -34,7 +34,7 @@ export const featuredWorks = [
     image: "/images/artwork-autumn-landscape.webp"
   },
   {
-    title: "Kerala Nilavilakku",
+    title: "Evening Bliss",
     medium: "(Description)",
     year: "",
     image: "/images/artwork-kerala-lamp.webp"
