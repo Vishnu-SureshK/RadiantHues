@@ -23,26 +23,26 @@ export const heroContent = {
 export const featuredWorks = [
   {
     title: "Rainy Evening Walk",
-    medium: "Acrylic on canvas",
-    year: "2020",
+    medium: "(Description)",
+    year: "",
     image: "/images/artwork-rainy-evening.webp"
   },
   {
     title: "Golden Marsh at Dusk",
-    medium: "Watercolor on paper",
-    year: "2020",
+    medium: "(Description)",
+    year: "",
     image: "/images/artwork-autumn-landscape.webp"
   },
   {
     title: "Kerala Nilavilakku",
-    medium: "Acrylic on canvas",
-    year: "2020",
+    medium: "(Description)",
+    year: "",
     image: "/images/artwork-kerala-lamp.webp"
   },
   {
     title: "RadheKrishna",
-    medium: "Acrylic on canvas",
-    year: "2020",
+    medium: "(Description)",
+    year: "",
     image: "/images/artwork-hot-air-balloons.jpg"
   }
 ];

@@ -27,7 +27,7 @@ export function ArtworkGrid({ items }: ArtworkGridProps) {
           <div className="art-copy">
             <h3>{item.title}</h3>
             <p>
-              {item.medium} · {item.year}
+              {item.medium}{item.year ? ` · ${item.year}` : ""}
             </p>
           </div>
         </article>
