@@ -92,7 +92,7 @@ export function GalleryCarousel() {
                   alt={image.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="carousel-image"
+                  style={{ objectFit: "contain", background: "#f5f2ed" }}
                   priority={index < 3}
                 />
                 <div className="image-overlay">
