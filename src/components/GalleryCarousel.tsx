@@ -81,8 +81,8 @@ export function GalleryCarousel() {
               key={`${image.src}-${index}`}
               className={`carousel-slide ${isActive ? 'active' : ''} ${isNext ? 'next' : ''} ${isPrev ? 'prev' : ''}`}
               style={{
-                transform: `translateX(${offset * 100}%) scale(${isActive ? 1 : 0.85})`,
-                opacity: isActive ? 1 : 0.4,
+                transform: `translateX(${offset * 100}%)`,
+                opacity: isActive ? 1 : 0,
                 zIndex: isActive ? 2 : 1
               }}
             >
@@ -140,35 +140,21 @@ export function GalleryCarousel() {
 
         .carousel-slide {
           position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 90%;
-          height: 90%;
-          transform: translate(-50%, -50%);
-          transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+          inset: 0;
+          transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
           will-change: transform, opacity;
-        }
-
-        .carousel-slide.active .image-container {
-          box-shadow:
-            0 20px 60px rgba(0, 0, 0, 0.15),
-            0 0 0 3px rgba(212, 175, 55, 0.3),
-            inset 0 1px 0 rgba(255, 255, 255, 0.5);
         }
 
         .image-container {
           position: relative;
           width: 100%;
           height: 100%;
-          border-radius: 0.8rem;
           overflow: hidden;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          transition: all 0.5s ease;
         }
 
         .carousel-image {
-          object-fit: cover;
-          animation: kenBurns 20s infinite alternate ease-in-out;
+          object-fit: contain;
+          background: #f5f2ed;
         }
 
         @keyframes kenBurns {
