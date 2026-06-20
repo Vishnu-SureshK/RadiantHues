@@ -13,22 +13,22 @@ const GALLERY_IMAGES: ArtworkImage[] = [
   {
     src: '/images/artwork-rainy-evening.webp',
     title: 'Rainy Evening Walk',
-    artist: 'Gayathri Suresh'
+    artist: '(Description)'
   },
   {
     src: '/images/artwork-autumn-landscape.webp',
     title: 'Golden Marsh at Dusk',
-    artist: 'Gayathri Suresh'
+    artist: '(Description)'
   },
   {
     src: '/images/artwork-kerala-lamp.webp',
     title: 'Kerala Nilavilakku',
-    artist: 'Gayathri Suresh'
+    artist: '(Description)'
   },
   {
     src: '/images/artwork-hot-air-balloons.jpg',
     title: 'RadheKrishna',
-    artist: 'Gayathri Suresh'
+    artist: '(Description)'
   }
 ];
 
