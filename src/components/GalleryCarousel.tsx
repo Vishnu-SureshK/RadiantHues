@@ -9,37 +9,26 @@ type ArtworkImage = {
   artist: string;
 };
 
-// Premium gallery showcase images
 const GALLERY_IMAGES: ArtworkImage[] = [
   {
-    src: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80',
-    title: 'Monsoon Dreams',
-    artist: 'Featured Work'
+    src: '/images/artwork-rainy-evening.webp',
+    title: 'Rainy Evening Walk',
+    artist: 'Gayathri Suresh'
   },
   {
-    src: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&q=80',
-    title: 'Temple Hues',
-    artist: 'Student Showcase'
+    src: '/images/artwork-autumn-landscape.webp',
+    title: 'Golden Marsh at Dusk',
+    artist: 'Gayathri Suresh'
   },
   {
-    src: 'https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=800&q=80',
-    title: 'Lotus Bloom',
-    artist: 'Featured Work'
+    src: '/images/artwork-kerala-lamp.webp',
+    title: 'Kerala Nilavilakku',
+    artist: 'Gayathri Suresh'
   },
   {
-    src: 'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800&q=80',
-    title: 'Festival Colors',
-    artist: 'Student Showcase'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&q=80',
-    title: 'Kerala Sunset',
-    artist: 'Featured Work'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=800&q=80',
-    title: 'Spice Market',
-    artist: 'Student Showcase'
+    src: '/images/artwork-hot-air-balloons.jpg',
+    title: 'RadheKrishna',
+    artist: 'Gayathri Suresh'
   }
 ];
 
