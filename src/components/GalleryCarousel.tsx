@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import { Lightbox } from '@/components/Lightbox';
 
 type ArtworkImage = {
   src: string;
@@ -35,6 +36,7 @@ const GALLERY_IMAGES: ArtworkImage[] = [
 export function GalleryCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   // Start with the unshuffled order so server and client markup match, then shuffle after mount
   const [shuffledImages, setShuffledImages] = useState<ArtworkImage[]>(GALLERY_IMAGES);
   const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
@@ -83,8 +85,10 @@ export function GalleryCarousel() {
               style={{
                 transform: `translateX(${offset * 100}%)`,
                 opacity: isActive ? 1 : 0,
-                zIndex: isActive ? 2 : 1
+                zIndex: isActive ? 2 : 1,
+                cursor: isActive ? 'zoom-in' : 'default'
               }}
+              onClick={() => isActive && setLightbox({ src: image.src, alt: image.title })}
             >
               <div className="image-container">
                 <Image
@@ -121,6 +125,10 @@ export function GalleryCarousel() {
 
       {/* Ambient glow effect */}
       <div className="ambient-glow" />
+
+      {lightbox && (
+        <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />
+      )}
 
       <style jsx>{`
         .gallery-carousel {
