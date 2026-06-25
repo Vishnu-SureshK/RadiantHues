@@ -51,7 +51,17 @@ export const galleryCollections = [
   {
     name: "Personal Portfolio",
     description: "Kerala-inspired works celebrating landscapes, festivals, and devotional art.",
-    works: featuredWorks
+    works: [
+      ...featuredWorks,
+      { title: "Artwork V", medium: "(Description)", year: "" },
+      { title: "Artwork VI", medium: "(Description)", year: "" },
+      { title: "Artwork VII", medium: "(Description)", year: "" },
+      { title: "Artwork VIII", medium: "(Description)", year: "" },
+      { title: "Artwork IX", medium: "(Description)", year: "" },
+      { title: "Artwork X", medium: "(Description)", year: "" },
+      { title: "Artwork XI", medium: "(Description)", year: "" },
+      { title: "Artwork XII", medium: "(Description)", year: "" }
+    ]
   },
   {
     name: "Student Showcase",
