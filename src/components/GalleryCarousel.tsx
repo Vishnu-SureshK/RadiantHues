@@ -49,7 +49,7 @@ const GALLERY_IMAGES: ArtworkImage[] = [
   {
     src: '/images/artwork-12.jpg',
     title: 'Phoenix Rising',
-    artist: '(Description)'
+    artist: 'Oil on canvas board'
   },
   {
     src: '/images/artwork-13.jpg',

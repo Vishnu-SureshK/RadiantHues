@@ -56,7 +56,7 @@ export const galleryCollections = [
       { title: "Hot Air Balloons", medium: "(Description)", year: "", image: "/images/artwork-5.webp" },
       { title: "Artwork VI", medium: "(Description)", year: "", image: "/images/artwork-6.webp" },
       { title: "Artwork VII", medium: "(Description)", year: "", image: "/images/artwork-7.webp" },
-      { title: "Phoenix Rising", medium: "(Description)", year: "", image: "/images/artwork-12.jpg" },
+      { title: "Phoenix Rising", medium: "Oil on canvas board", year: "", image: "/images/artwork-12.jpg" },
       { title: "Artwork XIII", medium: "(Description)", year: "", image: "/images/artwork-13.jpg" },
       { title: "Artwork XIV", medium: "(Description)", year: "", image: "/images/artwork-14.jpg" }
     ]
