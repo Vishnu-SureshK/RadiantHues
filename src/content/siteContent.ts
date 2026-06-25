@@ -56,11 +56,13 @@ export const galleryCollections = [
       { title: "Hot Air Balloons", medium: "(Description)", year: "", image: "/images/artwork-5.webp" },
       { title: "Artwork VI", medium: "(Description)", year: "", image: "/images/artwork-6.webp" },
       { title: "Artwork VII", medium: "(Description)", year: "", image: "/images/artwork-7.webp" },
-      { title: "Artwork VIII", medium: "(Description)", year: "" },
-      { title: "Artwork IX", medium: "(Description)", year: "" },
-      { title: "Artwork X", medium: "(Description)", year: "" },
-      { title: "Artwork XI", medium: "(Description)", year: "" },
-      { title: "Artwork XII", medium: "(Description)", year: "" }
+      { title: "Artwork VIII", medium: "(Description)", year: "", image: "/images/artwork-8.webp" },
+      { title: "Artwork IX", medium: "(Description)", year: "", image: "/images/artwork-9.webp" },
+      { title: "Artwork X", medium: "(Description)", year: "", image: "/images/artwork-10.webp" },
+      { title: "Artwork XI", medium: "(Description)", year: "", image: "/images/artwork-11.jpg" },
+      { title: "Artwork XII", medium: "(Description)", year: "", image: "/images/artwork-12.jpg" },
+      { title: "Artwork XIII", medium: "(Description)", year: "", image: "/images/artwork-13.jpg" },
+      { title: "Artwork XIV", medium: "(Description)", year: "", image: "/images/artwork-14.jpg" }
     ]
   },
   {

@@ -45,6 +45,41 @@ const GALLERY_IMAGES: ArtworkImage[] = [
     src: '/images/artwork-7.webp',
     title: 'Artwork VII',
     artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-8.webp',
+    title: 'Artwork VIII',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-9.webp',
+    title: 'Artwork IX',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-10.webp',
+    title: 'Artwork X',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-11.jpg',
+    title: 'Artwork XI',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-12.jpg',
+    title: 'Artwork XII',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-13.jpg',
+    title: 'Artwork XIII',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-14.jpg',
+    title: 'Artwork XIV',
+    artist: '(Description)'
   }
 ];
 
