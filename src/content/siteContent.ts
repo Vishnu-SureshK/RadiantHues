@@ -53,9 +53,9 @@ export const galleryCollections = [
     description: "Kerala-inspired works celebrating landscapes, festivals, and devotional art.",
     works: [
       ...featuredWorks,
-      { title: "Artwork V", medium: "(Description)", year: "" },
-      { title: "Artwork VI", medium: "(Description)", year: "" },
-      { title: "Artwork VII", medium: "(Description)", year: "" },
+      { title: "Artwork V", medium: "(Description)", year: "", image: "/images/artwork-5.webp" },
+      { title: "Artwork VI", medium: "(Description)", year: "", image: "/images/artwork-6.webp" },
+      { title: "Artwork VII", medium: "(Description)", year: "", image: "/images/artwork-7.webp" },
       { title: "Artwork VIII", medium: "(Description)", year: "" },
       { title: "Artwork IX", medium: "(Description)", year: "" },
       { title: "Artwork X", medium: "(Description)", year: "" },
