@@ -44,7 +44,7 @@ export function Lightbox({ src, alt, onClose }: LightboxProps) {
         .lightbox-overlay {
           position: fixed;
           inset: 0;
-          z-index: 1000;
+          z-index: 99999;
           background: rgba(0, 0, 0, 0.92);
           display: flex;
           align-items: center;
@@ -60,31 +60,29 @@ export function Lightbox({ src, alt, onClose }: LightboxProps) {
 
         .lightbox-close {
           position: absolute;
-          top: 1.25rem;
-          right: 1.5rem;
+          top: 1rem;
+          right: 1.25rem;
           background: none;
-          border: 1px solid rgba(255,255,255,0.3);
-          color: #fff;
-          font-size: 1.1rem;
-          width: 2.5rem;
-          height: 2.5rem;
-          border-radius: 50%;
+          border: none;
+          color: #ffffff;
+          font-size: 2.5rem;
+          font-weight: bold;
+          line-height: 1;
           cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: background 0.2s ease;
-          z-index: 1001;
+          z-index: 100000;
+          padding: 0.5rem;
+          transition: opacity 0.2s ease;
+          text-shadow: 0 0 8px rgba(0,0,0,0.8);
         }
 
         .lightbox-close:hover {
-          background: rgba(255,255,255,0.15);
+          opacity: 0.7;
         }
 
         .lightbox-content {
           position: relative;
-          width: 90vw;
-          height: 90vh;
+          width: 100vw;
+          height: 100vh;
           cursor: default;
         }
       `}</style>
