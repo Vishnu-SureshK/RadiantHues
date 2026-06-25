@@ -50,9 +50,11 @@ export function Lightbox({ src, alt, onClose }: LightboxProps) {
           position: "absolute",
           top: "1rem",
           right: "1.5rem",
-          background: "none",
+          background: "linear-gradient(135deg, #a855f7, #3b82f6)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
           border: "none",
-          color: "#ffffff",
           fontSize: "3rem",
           fontWeight: 700,
           lineHeight: 1,
@@ -60,7 +62,7 @@ export function Lightbox({ src, alt, onClose }: LightboxProps) {
           zIndex: 1000000,
           padding: "0.25rem 0.5rem",
           fontFamily: "Arial, sans-serif",
-          textShadow: "0 2px 12px rgba(0,0,0,0.9)",
+          filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.8))",
         }}
       >
         ✕
