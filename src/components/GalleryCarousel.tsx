@@ -48,7 +48,7 @@ const GALLERY_IMAGES: ArtworkImage[] = [
   },
   {
     src: '/images/artwork-12.jpg',
-    title: 'Artwork XII',
+    title: 'Burning Phoenix',
     artist: '(Description)'
   },
   {
