@@ -30,6 +30,21 @@ const GALLERY_IMAGES: ArtworkImage[] = [
     src: '/images/artwork-hot-air-balloons.jpg',
     title: 'RadheKrishna',
     artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-5.webp',
+    title: 'Artwork V',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-6.webp',
+    title: 'Artwork VI',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-7.webp',
+    title: 'Artwork VII',
+    artist: '(Description)'
   }
 ];
 
