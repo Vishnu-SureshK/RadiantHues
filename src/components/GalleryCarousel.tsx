@@ -33,7 +33,7 @@ const GALLERY_IMAGES: ArtworkImage[] = [
   },
   {
     src: '/images/artwork-5.webp',
-    title: 'Artwork V',
+    title: 'Hot Air Balloons',
     artist: '(Description)'
   },
   {
