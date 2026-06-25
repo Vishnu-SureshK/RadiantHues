@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 
@@ -11,21 +11,17 @@ type LightboxProps = {
 };
 
 export function Lightbox({ src, alt, onClose }: LightboxProps) {
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    setMounted(true);
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
-      setMounted(false);
     };
   }, [onClose]);
 
-  if (!mounted) return null;
+  if (typeof document === "undefined") return null;
 
   return createPortal(
     <div
@@ -45,9 +41,7 @@ export function Lightbox({ src, alt, onClose }: LightboxProps) {
         animation: "lbFadeIn 0.2s ease",
       }}
     >
-      <style>{`
-        @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
-      `}</style>
+      <style>{`@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }`}</style>
 
       <button
         onClick={(e) => { e.stopPropagation(); onClose(); }}
