@@ -90,10 +90,10 @@ main {
 
 .brand span {
   font-family: Caveat, cursive;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1;
-  background: linear-gradient(120deg, #8c4ad1 0%, #c2456e 45%, #0f8ca8 100%);
+  background: linear-gradient(120deg, #2f7d77 0%, #15403d 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -146,17 +146,21 @@ main {
 }
 
 .hero {
-  padding: 4rem 0 3.5rem;
+  padding: 2.5rem 0;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #faf6ee 0%, #f3ebdb 100%);
+  background: var(--bg);
+  min-height: calc(100svh - 80px);
+  display: flex;
+  align-items: center;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 3.5rem;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
   align-items: center;
+  width: 100%;
 }
 
 .eyebrow {
@@ -226,55 +230,31 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
-  margin: 0 0 1.25rem;
-  max-width: 18ch;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  margin: 0 0 1.1rem;
+  max-width: 16ch;
   font-family: var(--display);
   font-weight: 600;
-  line-height: 1.08;
+  line-height: 1.1;
   color: var(--text);
 }
 
 .lead {
-  max-width: 52ch;
+  max-width: 44ch;
   color: var(--muted);
-  line-height: 1.8;
-  font-size: 1.05rem;
+  line-height: 1.7;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .hero-image-wrap {
   position: relative;
-  height: 28rem;
-  min-height: 28rem;
+  height: 30rem;
+  min-height: 30rem;
   border-radius: 0.4rem;
-  border: 1px solid rgb(185 141 62 / 35%);
-  padding: 0.7rem;
-  background: #fffdf9;
-  box-shadow: 0 22px 50px rgb(42 33 27 / 14%);
+  border: 1px solid rgb(31 90 86 / 22%);
+  box-shadow: 0 20px 48px rgb(42 33 27 / 16%);
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-image-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  background: linear-gradient(135deg, var(--gold), var(--primary));
-  border-radius: 0.4rem;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: -1;
-  filter: blur(10px);
-}
-
-.hero-image-wrap:hover::before {
-  opacity: 0.35;
-}
-
-.hero-image-wrap:hover {
-  box-shadow: 0 28px 64px rgb(42 33 27 / 20%);
-  transform: translateY(-3px);
 }
 
 .media-placeholder {
@@ -749,9 +729,9 @@ h1 {
 
 .footer-brand-name {
   font-family: Caveat, cursive;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(120deg, #8c4ad1 0%, #c2456e 45%, #0f8ca8 100%);
+  background: linear-gradient(120deg, #2f7d77 0%, #15403d 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

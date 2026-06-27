@@ -14,10 +14,10 @@ export const navLinks = [
 
 export const heroContent = {
   eyebrow: "Art Lessons and Gallery · Naperville",
-  title: "Walk in curious. Walk out proud of what you made.",
-  body: "Patient teaching. Graphite pencil drawings, colored pencil drawings, watercolor painting, acrylic painting, oil painting, multimedia art, lippan art, textured art, and more. A teacher who believes art is for everyone. No jargon, no pressure—just real skills and classmates who cheer when your piece goes on the wall.",
+  title: "Walk in curious. Leave proud.",
+  body: "Patient, jargon-free lessons in watercolor, acrylic, oil, and more—where every student leaves with real skills and a finished piece worth framing.",
   ctaPrimary: { href: "/gallery", label: "See the gallery" },
-  ctaSecondary: { href: "/contact", label: "Say hello / book a class" }
+  ctaSecondary: { href: "/contact", label: "Book a class" }
 };
 
 export const featuredWorks = [
