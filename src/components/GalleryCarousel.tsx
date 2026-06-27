@@ -144,7 +144,7 @@ export function GalleryCarousel() {
                   alt={image.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: "contain", background: "#f5f2ed" }}
+                  style={{ objectFit: "contain", background: "#f3ecdf" }}
                   priority={index < 3}
                 />
                 <div className="image-overlay">
@@ -184,8 +184,8 @@ export function GalleryCarousel() {
           width: 100%;
           height: 100%;
           overflow: hidden;
-          border-radius: 1.1rem;
-          background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+          border-radius: 0.2rem;
+          background: #f6efe1;
         }
 
         .carousel-wrapper {
@@ -292,10 +292,10 @@ export function GalleryCarousel() {
         }
 
         .dot.active {
-          background: linear-gradient(135deg, #d4af37, #f0d98f);
+          background: linear-gradient(135deg, #b98d3e, #d8b76a);
           width: 24px;
           border-radius: 4px;
-          box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+          box-shadow: 0 2px 8px rgba(185, 141, 62, 0.45);
         }
 
         .ambient-glow {
@@ -307,8 +307,8 @@ export function GalleryCarousel() {
           transform: translate(-50%, -50%);
           background: radial-gradient(
             circle,
-            rgba(140, 74, 209, 0.08) 0%,
-            rgba(15, 140, 168, 0.06) 50%,
+            rgba(31, 90, 86, 0.1) 0%,
+            rgba(185, 141, 62, 0.07) 50%,
             transparent 100%
           );
           filter: blur(40px);

@@ -22,9 +22,9 @@ export function KeralaPattern() {
           background: linear-gradient(
             90deg,
             transparent 0%,
-            rgba(232, 229, 220, 0.3) 20%,
-            rgba(232, 229, 220, 1) 50%,
-            rgba(232, 229, 220, 0.3) 80%,
+            rgba(230, 217, 195, 0.3) 20%,
+            rgba(230, 217, 195, 1) 50%,
+            rgba(230, 217, 195, 0.3) 80%,
             transparent 100%
           );
           position: relative;
@@ -35,11 +35,11 @@ export function KeralaPattern() {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 60px;
-          height: 3px;
-          background: linear-gradient(90deg, #8c4ad1, #0f8ca8, #ff6b35);
+          width: 56px;
+          height: 2px;
+          background: linear-gradient(90deg, #1f5a56, #b98d3e);
           border-radius: 999px;
-          box-shadow: 0 2px 12px rgba(140, 74, 209, 0.25);
+          box-shadow: 0 2px 12px rgba(31, 90, 86, 0.2);
         }
 
         .divider-accent::before,
@@ -50,9 +50,9 @@ export function KeralaPattern() {
           transform: translateY(-50%);
           width: 4px;
           height: 4px;
-          background: #d4af37;
+          background: #b98d3e;
           border-radius: 50%;
-          box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+          box-shadow: 0 0 8px rgba(185, 141, 62, 0.4);
         }
 
         .divider-accent::before {
