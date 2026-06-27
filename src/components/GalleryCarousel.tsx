@@ -70,12 +70,30 @@ export function GalleryCarousel() {
   // Start with the unshuffled order so server and client markup match, then shuffle after mount
   const [shuffledImages, setShuffledImages] = useState<ArtworkImage[]>(GALLERY_IMAGES);
   const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
+  const isHoveredRef = useRef(false);
 
   useEffect(() => {
     // One-time client-only shuffle to avoid SSR/client hydration mismatch
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setShuffledImages([...GALLERY_IMAGES].sort(() => Math.random() - 0.5));
   }, []);
+
+  // Keep ref in sync so arrow-key handler never reads stale state
+  useEffect(() => { isHoveredRef.current = isHovered; }, [isHovered]);
+
+  // Arrow key navigation while hovering
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (!isHoveredRef.current) return;
+      if (e.key === 'ArrowLeft') {
+        setCurrentIndex((prev) => (prev - 1 + shuffledImages.length) % shuffledImages.length);
+      } else if (e.key === 'ArrowRight') {
+        setCurrentIndex((prev) => (prev + 1) % shuffledImages.length);
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [shuffledImages.length]);
 
   // Auto-advance carousel
   useEffect(() => {
