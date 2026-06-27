@@ -14,7 +14,10 @@ export default function HomePage() {
           <div className="hero-grid">
             <div>
               <p className="eyebrow">{heroContent.eyebrow}</p>
-              <h1>{heroContent.title}</h1>
+              <h1>
+                Walk in <span className="word-curious">curious</span>. Leave{" "}
+                <span className="word-proud">proud</span>.
+              </h1>
               <p className="lead">{heroContent.body}</p>
               <div className="hero-actions">
                 <Link className="button button-primary" href={heroContent.ctaPrimary.href}>

@@ -623,6 +623,24 @@ h1 {
   animation: slideIn 0.8s ease-out 0.1s both;
 }
 
+.word-curious {
+  color: #2a6cb8;
+}
+
+.word-proud {
+  background: linear-gradient(
+    100deg,
+    #8a5e16 0%,
+    #c89a3a 26%,
+    #f6e6ad 50%,
+    #c89a3a 74%,
+    #8a5e16 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero h1 em,
 .hero h1 i {
   font-style: italic;
