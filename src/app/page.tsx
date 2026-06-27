@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArtworkGrid } from "@/components/ArtworkGrid";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { SectionHeading } from "@/components/SectionHeading";
-import { PaintSplatter } from "@/components/PaintSplatter";
 import { KeralaPattern } from "@/components/KeralaPattern";
 import { GalleryCarousel } from "@/components/GalleryCarousel";
 import { featuredWorks, heroContent } from "@/content/siteContent";
@@ -11,7 +10,6 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <PaintSplatter />
         <div className="container">
           <div className="hero-grid">
             <div>
