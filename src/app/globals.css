@@ -93,10 +93,7 @@ main {
   font-size: 1.7rem;
   font-weight: 700;
   line-height: 1;
-  background: linear-gradient(120deg, #2f7d77 0%, #15403d 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0066cc;
 }
 
 .brand small {
@@ -104,8 +101,8 @@ main {
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 500;
+  color: #b98d3e;
+  font-weight: 600;
 }
 
 .nav-list {
@@ -749,10 +746,7 @@ h1 {
   font-family: Caveat, cursive;
   font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(120deg, #2f7d77 0%, #15403d 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0066cc;
   width: fit-content;
   margin: 0 0 0.5rem;
 }
