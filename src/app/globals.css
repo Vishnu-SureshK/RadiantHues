@@ -203,7 +203,7 @@ h2 {
   font-size: clamp(2rem, 3.8vw, 3rem);
   font-family: var(--display);
   font-weight: 600;
-  color: #0066cc;
+  color: #00478f;
 }
 
 h2::after {
@@ -213,7 +213,7 @@ h2::after {
   left: 0;
   width: 3.5rem;
   height: 2px;
-  background: linear-gradient(90deg, #0066cc, var(--gold));
+  background: linear-gradient(90deg, #00478f, var(--gold));
   border-radius: 999px;
 }
 
@@ -430,7 +430,7 @@ h1 {
   margin: 0 0 1rem;
   font-family: var(--display);
   font-weight: 600;
-  color: #0066cc;
+  color: #00478f;
 }
 
 .gallery-banner {
