@@ -24,7 +24,7 @@ export const heroContent = {
 export const stats = [
   { value: "XX+", label: "Years teaching" },
   { value: "XXX+", label: "Students taught" },
-  { value: "XX+", label: "Mediums explored" },
+  { value: "9 and counting", label: "Mediums explored" },
   { value: "Naperville", label: "In-person studio" }
 ];
 
