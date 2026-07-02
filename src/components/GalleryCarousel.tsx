@@ -38,12 +38,12 @@ const GALLERY_IMAGES: ArtworkImage[] = [
   },
   {
     src: '/images/artwork-6.webp',
-    title: 'Artwork VI',
+    title: 'Artwork 6',
     artist: '(Description)'
   },
   {
     src: '/images/artwork-7.webp',
-    title: 'Artwork VII',
+    title: 'Artwork 7',
     artist: '(Description)'
   },
   {
@@ -53,12 +53,12 @@ const GALLERY_IMAGES: ArtworkImage[] = [
   },
   {
     src: '/images/artwork-13.jpg',
-    title: 'Artwork XIII',
+    title: 'Artwork 13',
     artist: '(Description)'
   },
   {
     src: '/images/artwork-14.jpg',
-    title: 'Artwork XIV',
+    title: 'Artwork 14',
     artist: '(Description)'
   }
 ];
