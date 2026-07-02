@@ -31,7 +31,7 @@ export function ArtworkGrid({ items }: ArtworkGridProps) {
           >
             <div className="art-image-wrap">
               {item.image ? (
-                <Image src={item.image} alt={item.title} fill sizes="(max-width: 960px) 100vw, 33vw" style={{ objectFit: "contain" }} />
+                <Image src={item.image} alt={item.title} fill sizes="(max-width: 960px) 100vw, 33vw" style={{ objectFit: "cover" }} />
               ) : (
                 <MediaPlaceholder label={`${item.title} — add your image`} variant="card" />
               )}
