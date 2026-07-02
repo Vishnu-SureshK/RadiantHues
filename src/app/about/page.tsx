@@ -21,7 +21,7 @@ export default function AboutPage() {
           />
         </div>
         <div>
-        <h1 className="page-title">About Radiant Hues and Gayathri Suresh</h1>
+        <h1 className="page-title accent-gold">About Radiant Hues and Gayathri Suresh</h1>
         <p>
           Gayathri Suresh is a passionate art teacher from Naperville, Illinois. She always explores new styles and techniques and loves sharing her knowledge with her students. Gayathri believes that art is for everyone, and she strives to create a welcoming and inclusive environment for all her students.
         </p>
