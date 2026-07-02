@@ -56,7 +56,13 @@ export default function HomePage() {
           </div>
           <div>
             <SectionHeading
-              title="Where Tradition Meets Contemporary Learning"
+              title={
+                <>
+                  Where Tradition Meets{" "}
+                  <span className="accent-azure">Contemporary</span>{" "}
+                  <span className="accent-gold">Learning</span>
+                </>
+              }
               intro="From temple tones and monsoon skies to floral vibrancy and festive symbolism—each lesson celebrates technique and cultural storytelling."
             />
           </div>

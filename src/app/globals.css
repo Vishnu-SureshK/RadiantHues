@@ -625,7 +625,8 @@ h1 {
   color: #2a6cb8;
 }
 
-.word-proud {
+.word-proud,
+.accent-gold {
   background: linear-gradient(
     100deg,
     #8a5e16 0%,
@@ -637,6 +638,10 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.accent-azure {
+  color: #0066cc;
 }
 
 .hero h1 em,
