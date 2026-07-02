@@ -23,7 +23,7 @@ export async function POST(request: Request) {
   }
 
   const resendApiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
+  const to = process.env.CONTACT_TO_EMAIL ?? "ggayathri.suresh@gmail.com";
   const from = process.env.CONTACT_FROM_EMAIL ?? "onboarding@resend.dev";
 
   if (!resendApiKey || !to) {
@@ -33,6 +33,7 @@ export async function POST(request: Request) {
   const payload = {
     from,
     to,
+    reply_to: email,
     subject: `Radiant Hues Inquiry from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\n\n${message}`
   };
