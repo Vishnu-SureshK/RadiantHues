@@ -20,6 +20,32 @@ export const heroContent = {
   ctaSecondary: { href: "/contact", label: "Book a class" }
 };
 
+// Placeholder content — replace values with real numbers and details.
+export const stats = [
+  { value: "XX+", label: "Years teaching" },
+  { value: "XXX+", label: "Students taught" },
+  { value: "XX+", label: "Mediums explored" },
+  { value: "Naperville", label: "In-person studio" }
+];
+
+export const classes = [
+  {
+    title: "Kids",
+    body: "Playful group classes where young artists build confidence with color, drawing, and painting.",
+    detail: "Ages · schedule · skill level — add details"
+  },
+  {
+    title: "Adults",
+    body: "Relaxed classes for beginners and hobbyists to learn real techniques at their own pace.",
+    detail: "Mediums · group size · schedule — add details"
+  },
+  {
+    title: "Private 1:1",
+    body: "One-on-one sessions tailored to your goals, from a single skill to portfolio prep.",
+    detail: "Format · duration · rates — add details"
+  }
+];
+
 export const featuredWorks = [
   {
     title: "Rainy Evening Walk",

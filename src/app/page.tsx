@@ -4,7 +4,7 @@ import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { SectionHeading } from "@/components/SectionHeading";
 import { KeralaPattern } from "@/components/KeralaPattern";
 import { GalleryCarousel } from "@/components/GalleryCarousel";
-import { featuredWorks, heroContent } from "@/content/siteContent";
+import { featuredWorks, heroContent, stats, classes } from "@/content/siteContent";
 
 export default function HomePage() {
   return (
@@ -35,6 +35,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="stats-strip">
+        <div className="container stats-grid">
+          {stats.map((item) => (
+            <div className="stat" key={item.label}>
+              <p className="stat-value">{item.value}</p>
+              <p className="stat-label">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <KeralaPattern />
 
       <section className="section">
@@ -44,6 +55,34 @@ export default function HomePage() {
             intro="Professional artworks and student brilliance inspired by Kerala's vibrant palette."
           />
           <ArtworkGrid items={featuredWorks} />
+        </div>
+      </section>
+
+      <KeralaPattern />
+
+      <section className="section">
+        <div className="container">
+          <SectionHeading
+            title={
+              <>
+                Classes for <span className="accent-azure">every</span>{" "}
+                <span className="accent-gold">age</span>
+              </>
+            }
+            intro="Group and private lessons in Naperville. Replace this with your class details, schedule, and pricing."
+          />
+          <div className="class-grid">
+            {classes.map((item) => (
+              <article className="class-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p className="class-body">{item.body}</p>
+                <p className="class-detail">{item.detail}</p>
+                <Link className="class-link" href="/contact">
+                  Book a class →
+                </Link>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

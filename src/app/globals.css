@@ -563,6 +563,98 @@ h1 {
   border-color: rgb(31 90 86 / 35%);
 }
 
+.stats-strip {
+  background: #f1e7d6;
+  border-top: 2px solid rgb(185 141 62 / 45%);
+  border-bottom: 1px solid var(--border);
+  padding: 2.6rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 600;
+  color: #00478f;
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-label {
+  margin: 0.45rem 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.class-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.class-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-top: 3px solid #00478f;
+  border-radius: 0.4rem;
+  background: var(--surface);
+  padding: 1.6rem 1.4rem;
+  box-shadow: 0 10px 24px rgb(74 59 48 / 7%);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.class-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgb(74 59 48 / 14%);
+  border-color: rgb(185 141 62 / 45%);
+  border-top-color: #00478f;
+}
+
+.class-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+}
+
+.class-body {
+  color: #1a1a1a;
+  line-height: 1.6;
+  font-size: 0.98rem;
+  margin: 0 0 1rem;
+}
+
+.class-detail {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-style: italic;
+  margin: 0 0 1.3rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgb(185 141 62 / 32%);
+}
+
+.class-link {
+  margin-top: auto;
+  align-self: flex-start;
+  color: #00478f;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.class-link:hover {
+  color: var(--gold);
+  transform: translateX(3px);
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -888,5 +980,10 @@ h1 {
 
   h2::after {
     width: 3rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem 1rem;
   }
 }
