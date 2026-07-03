@@ -152,11 +152,11 @@ main {
 }
 
 .hero {
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
   position: relative;
   overflow: hidden;
   background: var(--bg);
-  min-height: calc(100svh - 80px);
+  min-height: calc(100svh - 84px);
   display: flex;
   align-items: center;
 }
@@ -255,8 +255,9 @@ h1 {
 
 .hero-image-wrap {
   position: relative;
-  height: 30rem;
-  min-height: 30rem;
+  height: calc(100svh - 84px - 3rem);
+  min-height: 24rem;
+  max-height: 46rem;
   border-radius: 0.4rem;
   border: 2px solid rgb(185 141 62 / 55%);
   box-shadow: 0 20px 48px rgb(42 33 27 / 16%);
@@ -968,6 +969,13 @@ h1 {
 
   .hero {
     padding-top: 3rem;
+    min-height: 0;
+  }
+
+  .hero-image-wrap {
+    height: 22rem;
+    min-height: 22rem;
+    max-height: 22rem;
   }
 
   .footer-inner {
