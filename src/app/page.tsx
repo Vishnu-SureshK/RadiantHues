@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { ArtworkGrid } from "@/components/ArtworkGrid";
+import { FeaturedWorks } from "@/components/FeaturedWorks";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { SectionHeading } from "@/components/SectionHeading";
 import { KeralaPattern } from "@/components/KeralaPattern";
 import { GalleryCarousel } from "@/components/GalleryCarousel";
-import { featuredWorks, heroContent, stats, classes } from "@/content/siteContent";
+import { heroContent, stats, classes } from "@/content/siteContent";
 
 export default function HomePage() {
   return (
@@ -54,7 +54,7 @@ export default function HomePage() {
             title="Featured Works"
             intro="Professional artworks and student brilliance inspired by Kerala's vibrant palette."
           />
-          <ArtworkGrid items={featuredWorks} />
+          <FeaturedWorks count={4} />
         </div>
       </section>
 
