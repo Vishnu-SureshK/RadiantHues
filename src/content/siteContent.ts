@@ -80,14 +80,14 @@ export const galleryCollections = [
     works: [
       ...featuredWorks,
       { title: "Hot Air Balloons", medium: "(Description)", year: "", image: "/images/artwork-5.webp" },
-      { title: "Artwork 6", medium: "(Description)", year: "", image: "/images/artwork-6.webp" },
-      { title: "Artwork 7", medium: "(Description)", year: "", image: "/images/artwork-7.webp" },
+      { title: "RadhaKrishna", medium: "(Description)", year: "", image: "/images/artwork-6.webp" },
+      { title: "Sunset over the Mountain", medium: "(Description)", year: "", image: "/images/artwork-7.webp" },
       { title: "Phoenix Rising", medium: "Oil on canvas board", year: "", image: "/images/artwork-12.jpg" },
-      { title: "Artwork 13", medium: "(Description)", year: "", image: "/images/artwork-13.jpg" },
-      { title: "Artwork 14", medium: "(Description)", year: "", image: "/images/artwork-14.jpg" },
-      { title: "Artwork 15", medium: "(Description)", year: "", image: "/images/artwork-15.jpg" },
-      { title: "Artwork 16", medium: "(Description)", year: "", image: "/images/artwork-16.jpg" },
-      { title: "Artwork 17", medium: "(Description)", year: "", image: "/images/artwork-17.jpg" }
+      { title: "Woodpecker", medium: "(Description)", year: "", image: "/images/artwork-13.jpg" },
+      { title: "Celebrate", medium: "(Description)", year: "", image: "/images/artwork-14.jpg" },
+      { title: "Last Flowers of the Season", medium: "(Description)", year: "", image: "/images/artwork-15.jpg" },
+      { title: "Voyaging at Sea", medium: "(Description)", year: "", image: "/images/artwork-16.jpg" },
+      { title: "Snowy Night", medium: "(Description)", year: "", image: "/images/artwork-17.jpg" }
     ]
   },
   {

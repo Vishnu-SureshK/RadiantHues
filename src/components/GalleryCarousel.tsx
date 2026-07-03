@@ -38,12 +38,12 @@ const GALLERY_IMAGES: ArtworkImage[] = [
   },
   {
     src: '/images/artwork-6.webp',
-    title: 'Artwork 6',
+    title: 'RadhaKrishna',
     artist: '(Description)'
   },
   {
     src: '/images/artwork-7.webp',
-    title: 'Artwork 7',
+    title: 'Sunset over the Mountain',
     artist: '(Description)'
   },
   {
@@ -53,27 +53,27 @@ const GALLERY_IMAGES: ArtworkImage[] = [
   },
   {
     src: '/images/artwork-13.jpg',
-    title: 'Artwork 13',
+    title: 'Woodpecker',
     artist: '(Description)'
   },
   {
     src: '/images/artwork-14.jpg',
-    title: 'Artwork 14',
+    title: 'Celebrate',
     artist: '(Description)'
   },
   {
     src: '/images/artwork-15.jpg',
-    title: 'Artwork 15',
+    title: 'Last Flowers of the Season',
     artist: '(Description)'
   },
   {
     src: '/images/artwork-16.jpg',
-    title: 'Artwork 16',
+    title: 'Voyaging at Sea',
     artist: '(Description)'
   },
   {
     src: '/images/artwork-17.jpg',
-    title: 'Artwork 17',
+    title: 'Snowy Night',
     artist: '(Description)'
   }
 ];
