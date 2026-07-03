@@ -60,6 +60,21 @@ const GALLERY_IMAGES: ArtworkImage[] = [
     src: '/images/artwork-14.jpg',
     title: 'Artwork 14',
     artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-15.jpg',
+    title: 'Artwork 15',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-16.jpg',
+    title: 'Artwork 16',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-17.jpg',
+    title: 'Artwork 17',
+    artist: '(Description)'
   }
 ];
 

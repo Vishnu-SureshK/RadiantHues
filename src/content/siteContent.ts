@@ -84,7 +84,10 @@ export const galleryCollections = [
       { title: "Artwork 7", medium: "(Description)", year: "", image: "/images/artwork-7.webp" },
       { title: "Phoenix Rising", medium: "Oil on canvas board", year: "", image: "/images/artwork-12.jpg" },
       { title: "Artwork 13", medium: "(Description)", year: "", image: "/images/artwork-13.jpg" },
-      { title: "Artwork 14", medium: "(Description)", year: "", image: "/images/artwork-14.jpg" }
+      { title: "Artwork 14", medium: "(Description)", year: "", image: "/images/artwork-14.jpg" },
+      { title: "Artwork 15", medium: "(Description)", year: "", image: "/images/artwork-15.jpg" },
+      { title: "Artwork 16", medium: "(Description)", year: "", image: "/images/artwork-16.jpg" },
+      { title: "Artwork 17", medium: "(Description)", year: "", image: "/images/artwork-17.jpg" }
     ]
   },
   {
