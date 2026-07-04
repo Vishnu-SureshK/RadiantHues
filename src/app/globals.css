@@ -765,6 +765,12 @@ h1 {
   color: #0066cc;
 }
 
+/* Block headings using the gold gradient must hug their text so the
+   gradient maps onto the letters (lightest center, darkest ends). */
+.accent-gold {
+  width: fit-content;
+}
+
 .hero h1 em,
 .hero h1 i {
   font-style: italic;
