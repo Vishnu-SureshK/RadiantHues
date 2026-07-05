@@ -376,7 +376,7 @@ export function GalleryCarousel() {
         }
 
         .dot.active {
-          background: #d8b76a;
+          background: #22406b;
           width: 20px;
           border-radius: 4px;
         }

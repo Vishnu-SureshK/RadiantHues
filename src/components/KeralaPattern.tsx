@@ -37,9 +37,8 @@ export function KeralaPattern() {
           transform: translate(-50%, -50%);
           width: 56px;
           height: 2px;
-          background: linear-gradient(90deg, #1f5a56, #b98d3e);
+          background: #1e5a54;
           border-radius: 999px;
-          box-shadow: 0 2px 12px rgba(31, 90, 86, 0.2);
         }
 
         .divider-accent::before,
@@ -50,9 +49,8 @@ export function KeralaPattern() {
           transform: translateY(-50%);
           width: 4px;
           height: 4px;
-          background: #b98d3e;
+          background: #22406b;
           border-radius: 50%;
-          box-shadow: 0 0 8px rgba(185, 141, 62, 0.4);
         }
 
         .divider-accent::before {
