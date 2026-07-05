@@ -95,7 +95,17 @@ export const galleryCollections = [
     name: "Kid Student Showcase",
     description: "Young artists building skills and confidence—one colorful piece at a time.",
     works: [
-      { title: "Artwork 19", medium: "(Description)", year: "", image: "/images/artwork-19.jpg" }
+      { title: "Artwork 19", medium: "(Description)", year: "", image: "/images/artwork-19.jpg" },
+      {
+        title: "Kid piece 1",
+        medium: "Add medium and details",
+        year: "—"
+      },
+      {
+        title: "Kid piece 2",
+        medium: "Add medium and details",
+        year: "—"
+      }
     ]
   },
   {
