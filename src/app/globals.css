@@ -787,11 +787,13 @@ h1 {
 
 .contact-image {
   position: relative;
-  min-height: 13rem;
-  margin-top: 1rem;
+  width: 100%;
+  max-width: 24rem;
+  aspect-ratio: 3477 / 4652;
+  margin-top: 1.25rem;
   border-radius: 0.9rem;
   overflow: hidden;
-  border: 1px solid #f0e6d9;
+  border: 1px solid rgb(185 141 62 / 45%);
   transition: all 0.3s ease;
 }
 

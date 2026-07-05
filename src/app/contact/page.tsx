@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -30,7 +30,14 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             Interested in lessons or commissioning a piece? Let&apos;s connect.
           </p>
           <div className="contact-image">
-            <MediaPlaceholder label="Featured artwork — add an image for this section" variant="card" />
+            <Image
+              src="/images/artwork-hot-air-balloons.jpg"
+              alt="RadheKrishna"
+              fill
+              sizes="(max-width: 768px) 90vw, 24rem"
+              style={{ objectFit: "cover" }}
+              priority
+            />
           </div>
           {statusMessage ? <p className="status-message">{statusMessage}</p> : null}
         </div>
