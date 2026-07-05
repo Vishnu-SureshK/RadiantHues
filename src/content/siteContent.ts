@@ -88,7 +88,13 @@ export const galleryCollections = [
       { title: "Last Flowers of the Season", medium: "(Description)", year: "", image: "/images/artwork-15.jpg" },
       { title: "Voyaging at Sea", medium: "(Description)", year: "", image: "/images/artwork-16.jpg" },
       { title: "Snowy Night", medium: "(Description)", year: "", image: "/images/artwork-17.jpg" },
-      { title: "Artwork 22", medium: "(Description)", year: "", image: "/images/artwork-22.jpg" }
+      { title: "Artwork 22", medium: "(Description)", year: "", image: "/images/artwork-22.jpg" },
+      { title: "Artwork 23", medium: "(Description)", year: "", image: "/images/artwork-23.jpg" },
+      { title: "Artwork 24", medium: "(Description)", year: "", image: "/images/artwork-24.jpg" },
+      { title: "Artwork 25", medium: "(Description)", year: "", image: "/images/artwork-25.jpg" },
+      { title: "Artwork 26", medium: "(Description)", year: "", image: "/images/artwork-26.jpg" },
+      { title: "Artwork 27", medium: "(Description)", year: "", image: "/images/artwork-27.jpg" },
+      { title: "Artwork 28", medium: "(Description)", year: "", image: "/images/artwork-28.jpg" }
     ]
   },
   {
