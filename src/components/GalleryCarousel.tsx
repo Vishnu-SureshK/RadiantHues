@@ -75,6 +75,31 @@ const GALLERY_IMAGES: ArtworkImage[] = [
     src: '/images/artwork-17.jpg',
     title: 'Snowy Night',
     artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-18.jpg',
+    title: 'Artwork 18',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-19.jpg',
+    title: 'Artwork 19',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-20.jpg',
+    title: 'Artwork 20',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-21.jpg',
+    title: 'Artwork 21',
+    artist: '(Description)'
+  },
+  {
+    src: '/images/artwork-22.jpg',
+    title: 'Artwork 22',
+    artist: '(Description)'
   }
 ];
 
