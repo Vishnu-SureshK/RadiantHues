@@ -31,8 +31,8 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           </p>
           <div className="contact-image">
             <Image
-              src="/images/artwork-hot-air-balloons.jpg"
-              alt="RadheKrishna"
+              src="/images/artwork-24.jpg"
+              alt="Artwork 24"
               fill
               sizes="(max-width: 768px) 90vw, 24rem"
               style={{ objectFit: "cover" }}
