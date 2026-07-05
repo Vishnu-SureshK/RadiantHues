@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -34,10 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CanvasTexture />
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
+        <ClerkProvider>
+          <CanvasTexture />
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+        </ClerkProvider>
       </body>
     </html>
   );

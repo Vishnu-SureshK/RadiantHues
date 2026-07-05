@@ -23,8 +23,8 @@ export const heroContent = {
 // Placeholder content — replace values with real numbers and details.
 export const stats = [
   { value: "10+", label: "Years teaching" },
-  { value: "Hundreds", label: "Students taught" },
-  { value: "9 and counting", label: "Mediums explored" },
+  { value: "100+", label: "Students taught" },
+  { value: "9+", label: "Mediums explored" },
   { value: "Naperville", label: "In-person studio" }
 ];
 

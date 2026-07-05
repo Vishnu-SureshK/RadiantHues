@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap");
 
 :root {
   /* Base — warm cream, kept from the original site */
@@ -109,26 +109,28 @@ main {
 }
 
 .brand span {
-  font-family: var(--display);
-  font-size: 1.9rem;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  color: var(--text);
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.15rem;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: normal;
+  color: var(--pop);
 }
 
 .brand small {
   font-family: Manrope, sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
   font-weight: 600;
+  padding-left: 0.12rem;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 1.8rem;
   margin: 0;
   padding: 0;
@@ -163,10 +165,10 @@ main {
   transform: translateX(-50%) scaleX(1);
 }
 
-.auth-controls {
+.nav-auth {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
 .auth-page {
@@ -357,6 +359,18 @@ h1 {
   padding: 5rem 0;
 }
 
+/* When a divider sits against a section, it already carries the separation —
+   trim the adjoining padding so inter-section gaps stay even (and don't
+   compound into oversized whitespace). Standalone pages have no divider,
+   so they keep the full 5rem rhythm. */
+.section-divider + .section {
+  padding-top: 2rem;
+}
+
+.section:has(+ .section-divider) {
+  padding-bottom: 2rem;
+}
+
 .section-heading p,
 .page-intro,
 .prose p {
@@ -465,7 +479,6 @@ h1 {
 }
 
 .feature-band {
-  padding-top: 1rem;
   position: relative;
 }
 
@@ -667,13 +680,16 @@ h1 {
 
 .hero h1 {
   animation: slideIn 0.8s ease-out 0.1s both;
+  /* Extra line spacing so the coral underline under "curious" never overlaps
+     the line below it. */
+  line-height: 1.32;
 }
 
 /* Hero pop: one word gets a coral underline; its pair takes the teal anchor. */
 .word-curious {
   color: var(--text);
   border-bottom: 3px solid var(--pop);
-  padding-bottom: 1px;
+  padding-bottom: 3px;
 }
 
 .word-proud {
@@ -793,10 +809,10 @@ h1 {
 }
 
 .footer-brand-name {
-  font-family: var(--display);
-  font-size: 1.9rem;
-  font-weight: 600;
-  color: var(--text);
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.3rem;
+  font-weight: 400;
+  color: var(--pop);
   width: fit-content;
   margin: 0 0 0.5rem;
 }
