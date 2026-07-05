@@ -88,10 +88,6 @@ export const galleryCollections = [
       { title: "Last Flowers of the Season", medium: "(Description)", year: "", image: "/images/artwork-15.jpg" },
       { title: "Voyaging at Sea", medium: "(Description)", year: "", image: "/images/artwork-16.jpg" },
       { title: "Snowy Night", medium: "(Description)", year: "", image: "/images/artwork-17.jpg" },
-      { title: "Artwork 18", medium: "(Description)", year: "", image: "/images/artwork-18.jpg" },
-      { title: "Artwork 19", medium: "(Description)", year: "", image: "/images/artwork-19.jpg" },
-      { title: "Artwork 20", medium: "(Description)", year: "", image: "/images/artwork-20.jpg" },
-      { title: "Artwork 21", medium: "(Description)", year: "", image: "/images/artwork-21.jpg" },
       { title: "Artwork 22", medium: "(Description)", year: "", image: "/images/artwork-22.jpg" }
     ]
   },
@@ -99,42 +95,16 @@ export const galleryCollections = [
     name: "Kid Student Showcase",
     description: "Young artists building skills and confidence—one colorful piece at a time.",
     works: [
-      {
-        title: "Kid piece 1",
-        medium: "Add medium and details",
-        year: "—"
-      },
-      {
-        title: "Kid piece 2",
-        medium: "Add medium and details",
-        year: "—"
-      },
-      {
-        title: "Kid piece 3",
-        medium: "Add medium and details",
-        year: "—"
-      }
+      { title: "Artwork 19", medium: "(Description)", year: "", image: "/images/artwork-19.jpg" }
     ]
   },
   {
     name: "Adult Student Showcase",
     description: "Beginners and returning artists bringing their own ideas to life.",
     works: [
-      {
-        title: "Adult piece 1",
-        medium: "Add medium and details",
-        year: "—"
-      },
-      {
-        title: "Adult piece 2",
-        medium: "Add medium and details",
-        year: "—"
-      },
-      {
-        title: "Adult piece 3",
-        medium: "Add medium and details",
-        year: "—"
-      }
+      { title: "Artwork 18", medium: "(Description)", year: "", image: "/images/artwork-18.jpg" },
+      { title: "Artwork 20", medium: "(Description)", year: "", image: "/images/artwork-20.jpg" },
+      { title: "Artwork 21", medium: "(Description)", year: "", image: "/images/artwork-21.jpg" }
     ]
   }
 ];
