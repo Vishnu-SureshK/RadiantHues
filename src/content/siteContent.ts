@@ -91,21 +91,42 @@ export const galleryCollections = [
     ]
   },
   {
-    name: "Student Showcase",
-    description: "Curated works showcasing color confidence and creative storytelling.",
+    name: "Kid Student Showcase",
+    description: "Young artists building skills and confidence—one colorful piece at a time.",
     works: [
       {
-        title: "Student piece 1",
+        title: "Kid piece 1",
         medium: "Add medium and details",
         year: "—"
       },
       {
-        title: "Student piece 2",
+        title: "Kid piece 2",
         medium: "Add medium and details",
         year: "—"
       },
       {
-        title: "Student piece 3",
+        title: "Kid piece 3",
+        medium: "Add medium and details",
+        year: "—"
+      }
+    ]
+  },
+  {
+    name: "Adult Student Showcase",
+    description: "Beginners and returning artists bringing their own ideas to life.",
+    works: [
+      {
+        title: "Adult piece 1",
+        medium: "Add medium and details",
+        year: "—"
+      },
+      {
+        title: "Adult piece 2",
+        medium: "Add medium and details",
+        year: "—"
+      },
+      {
+        title: "Adult piece 3",
         medium: "Add medium and details",
         year: "—"
       }
