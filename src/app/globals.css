@@ -102,7 +102,7 @@ main {
   font-weight: 600;
   line-height: 1;
   letter-spacing: 0.01em;
-  color: #0066cc;
+  color: #1a1a1a;
 }
 
 .brand small {
@@ -110,7 +110,7 @@ main {
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #b98d3e;
+  color: #1a1a1a;
   font-weight: 600;
 }
 
@@ -170,7 +170,7 @@ main {
 }
 
 .eyebrow {
-  color: var(--secondary);
+  color: #1a1a1a;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -186,7 +186,7 @@ main {
   left: -1.5rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--secondary);
+  color: #1a1a1a;
   font-weight: 400;
 }
 
@@ -203,7 +203,7 @@ h2 {
   font-size: clamp(2rem, 3.8vw, 3rem);
   font-family: var(--display);
   font-weight: 600;
-  color: #00478f;
+  color: #1a1a1a;
 }
 
 h2::after {
@@ -375,7 +375,7 @@ h1 {
 .button-secondary {
   border: 1px solid #c8ae7a;
   background: transparent;
-  color: #8a6a2e;
+  color: #1a1a1a;
   letter-spacing: 0.02em;
   position: relative;
   overflow: hidden;
@@ -399,7 +399,7 @@ h1 {
 
 .button-secondary:hover {
   border-color: var(--gold);
-  color: #6f5320;
+  color: #1a1a1a;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgb(185 141 62 / 22%);
 }
@@ -431,7 +431,7 @@ h1 {
   margin: 0 0 1rem;
   font-family: var(--display);
   font-weight: 600;
-  color: #00478f;
+  color: #1a1a1a;
 }
 
 .gallery-banner {
@@ -582,7 +582,7 @@ h1 {
   font-family: var(--display);
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 600;
-  color: #00478f;
+  color: #1a1a1a;
   margin: 0;
   line-height: 1;
 }
@@ -645,14 +645,14 @@ h1 {
 .class-link {
   margin-top: auto;
   align-self: flex-start;
-  color: #00478f;
+  color: #1a1a1a;
   font-weight: 600;
   font-size: 0.9rem;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .class-link:hover {
-  color: var(--gold);
+  color: #1a1a1a;
   transform: translateX(3px);
 }
 
@@ -743,26 +743,16 @@ h1 {
 }
 
 .word-curious {
-  color: #2a6cb8;
+  color: #1a1a1a;
 }
 
 .word-proud,
 .accent-gold {
-  background: linear-gradient(
-    100deg,
-    #8a5e16 0%,
-    #c89a3a 26%,
-    #f6e6ad 50%,
-    #c89a3a 74%,
-    #8a5e16 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #1a1a1a;
 }
 
 .accent-azure {
-  color: #0066cc;
+  color: #1a1a1a;
 }
 
 /* Block headings using the gold gradient must hug their text so the
@@ -881,7 +871,7 @@ h1 {
   font-family: var(--display);
   font-size: 1.9rem;
   font-weight: 600;
-  color: #0066cc;
+  color: #1a1a1a;
   width: fit-content;
   margin: 0 0 0.5rem;
 }
