@@ -23,7 +23,7 @@ export default function GalleryPage() {
             alt="Golden Marsh at Dusk"
             fill
             sizes="(max-width: 960px) 100vw, 1200px"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", objectPosition: "center 82%" }}
             priority
           />
         </div>
