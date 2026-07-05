@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArtworkGrid } from "@/components/ArtworkGrid";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { SectionHeading } from "@/components/SectionHeading";
 import { galleryCollections } from "@/content/siteContent";
 
@@ -18,7 +18,14 @@ export default function GalleryPage() {
           A curated blend of professional works and student brilliance inspired by Kerala color palettes.
         </p>
         <div className="gallery-banner">
-          <MediaPlaceholder label="Gallery banner — add your hero collage or feature piece" variant="banner" />
+          <Image
+            src="/images/artwork-autumn-landscape.webp"
+            alt="Golden Marsh at Dusk"
+            fill
+            sizes="(max-width: 960px) 100vw, 1200px"
+            style={{ objectFit: "cover" }}
+            priority
+          />
         </div>
 
         {galleryCollections.map((collection) => (
