@@ -819,9 +819,10 @@ h1 {
 }
 
 .footer-brand-name {
-  font-family: 'Great Vibes', cursive;
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
   font-size: 2.3rem;
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--pop);
   width: fit-content;
   margin: 0 0 0.5rem;
