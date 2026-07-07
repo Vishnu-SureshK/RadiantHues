@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FeaturedWorks } from "@/components/FeaturedWorks";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
 import { KeralaPattern } from "@/components/KeralaPattern";
 import { GalleryCarousel } from "@/components/GalleryCarousel";
@@ -91,7 +91,13 @@ export default function HomePage() {
       <section className="section feature-band">
         <div className="container feature-grid">
           <div className="feature-visual">
-            <MediaPlaceholder label="Studio or student showcase — add your photo" variant="card" />
+            <Image
+              src="/images/artwork-20.jpg"
+              alt="Ganesha and elephants — traditional Indian mural triptych"
+              fill
+              sizes="(max-width: 960px) 100vw, 45vw"
+              style={{ objectFit: "cover" }}
+            />
           </div>
           <div>
             <SectionHeading
