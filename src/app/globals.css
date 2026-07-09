@@ -961,26 +961,8 @@ h1 {
   padding: 2.5rem 0;
 }
 
-html {
-  scroll-snap-type: y proximity;
-  scroll-padding-top: 84px;
-}
-
-.hero,
-.panel {
-  scroll-snap-align: start;
-}
-
-.stats-strip.panel .stat-value {
-  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
-}
-
 @media (max-width: 768px) {
   .panel {
     min-height: auto;
-  }
-
-  html {
-    scroll-snap-type: none;
   }
 }
