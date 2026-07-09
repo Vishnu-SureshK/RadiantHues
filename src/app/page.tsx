@@ -2,7 +2,6 @@ import Link from "next/link";
 import { FeaturedWorks } from "@/components/FeaturedWorks";
 import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
-import { KeralaPattern } from "@/components/KeralaPattern";
 import { GalleryCarousel } from "@/components/GalleryCarousel";
 import { heroContent, stats, classes } from "@/content/siteContent";
 
@@ -35,7 +34,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="stats-strip">
+      <section className="stats-strip panel">
         <div className="container stats-grid">
           {stats.map((item) => (
             <div className="stat" key={item.label}>
@@ -46,9 +45,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <KeralaPattern />
-
-      <section className="section">
+      <section className="section panel">
         <div className="container">
           <SectionHeading
             title="Featured Works"
@@ -58,9 +55,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <KeralaPattern />
-
-      <section className="section">
+      <section className="section panel">
         <div className="container">
           <SectionHeading
             title={
@@ -86,9 +81,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <KeralaPattern />
-
-      <section className="section feature-band">
+      <section className="section feature-band panel">
         <div className="container feature-grid">
           <div className="feature-visual">
             <Image
