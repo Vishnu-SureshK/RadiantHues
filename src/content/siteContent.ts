@@ -75,7 +75,7 @@ export const featuredWorks = [
 
 export const galleryCollections = [
   {
-    name: "Personal Portfolio",
+    name: "Teacher Showcase",
     description: "Kerala-inspired works celebrating landscapes, festivals, and devotional art.",
     works: [
       ...featuredWorks,
