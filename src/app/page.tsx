@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FeaturedWorks } from "@/components/FeaturedWorks";
+import { FeaturedCarousel } from "@/components/FeaturedCarousel";
 import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
 import { KeralaPattern } from "@/components/KeralaPattern";
@@ -52,8 +52,8 @@ export default function HomePage() {
             title="Featured Works"
             intro="Professional artworks and student brilliance inspired by Kerala's vibrant palette."
           />
-          <FeaturedWorks count={4} />
         </div>
+        <FeaturedCarousel />
       </section>
 
       <KeralaPattern />

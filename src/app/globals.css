@@ -961,6 +961,59 @@ h1 {
   padding: 2.5rem 0;
 }
 
+/* Featured Works infinite marquee — same height, natural widths, seamless loop */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2.5rem;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 55s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  position: relative;
+  height: 18rem;
+  flex: 0 0 auto;
+  margin-right: 1.25rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 24px rgb(34 28 21 / 8%);
+  background: var(--surface);
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-item {
+    height: 12rem;
+    margin-right: 0.85rem;
+  }
+}
+
 @media (max-width: 768px) {
   .panel {
     min-height: auto;

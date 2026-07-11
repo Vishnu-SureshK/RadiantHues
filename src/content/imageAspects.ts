@@ -1,0 +1,33 @@
+// Auto-generated: aspect ratio (width / height) for each artwork image.
+// Regenerate after adding images so the marquee reserves correct widths.
+export const imageAspects: Record<string, number> = {
+  "/images/artwork-10.webp": 0.7949,
+  "/images/artwork-11.jpg": 0.7475,
+  "/images/artwork-12.jpg": 0.6775,
+  "/images/artwork-13.jpg": 0.7612,
+  "/images/artwork-14.jpg": 1.1619,
+  "/images/artwork-15.jpg": 0.8063,
+  "/images/artwork-16.jpg": 0.8013,
+  "/images/artwork-17.jpg": 0.6675,
+  "/images/artwork-18.jpg": 1.0178,
+  "/images/artwork-19.jpg": 1.3594,
+  "/images/artwork-20.jpg": 2.171,
+  "/images/artwork-21.jpg": 1.4829,
+  "/images/artwork-22.jpg": 0.7525,
+  "/images/artwork-23.jpg": 2.0382,
+  "/images/artwork-24.jpg": 0.6594,
+  "/images/artwork-25.jpg": 0.7911,
+  "/images/artwork-26.jpg": 1.5864,
+  "/images/artwork-27.jpg": 1.1817,
+  "/images/artwork-28.jpg": 0.7113,
+  "/images/artwork-5.webp": 1.4968,
+  "/images/artwork-6.webp": 0.7813,
+  "/images/artwork-7.webp": 0.8018,
+  "/images/artwork-8.webp": 1.3319,
+  "/images/artwork-9.webp": 1.37,
+  "/images/artwork-autumn-landscape.webp": 1.37,
+  "/images/artwork-hot-air-balloons.jpg": 0.7475,
+  "/images/artwork-kerala-lamp.webp": 0.7949,
+  "/images/artwork-rainy-evening.webp": 1.3319,
+  "/images/gayathri-portrait.webp": 0.9609
+};
