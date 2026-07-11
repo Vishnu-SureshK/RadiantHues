@@ -68,8 +68,8 @@ a {
   transition: color 0.2s ease;
 }
 
-.prose a,
-.section-heading a,
+.prose a:not(.button),
+.section-heading a:not(.button),
 p a:not(.button) {
   color: var(--primary);
   text-decoration: underline;
@@ -77,8 +77,8 @@ p a:not(.button) {
   text-underline-offset: 2px;
 }
 
-.prose a:hover,
-.section-heading a:hover,
+.prose a:not(.button):hover,
+.section-heading a:not(.button):hover,
 p a:not(.button):hover {
   color: var(--primary-deep);
   text-decoration-color: var(--primary-deep);
