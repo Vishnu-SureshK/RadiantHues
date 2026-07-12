@@ -3,155 +3,23 @@
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { Lightbox } from '@/components/Lightbox';
+import { worksByCategory, displayTitle, credit } from '@/content/artworks';
 
-type ArtworkImage = {
-  src: string;
-  title: string;
-  artist: string;
-};
-
-const GALLERY_IMAGES: ArtworkImage[] = [
-  {
-    src: '/images/artwork-rainy-evening.webp',
-    title: 'Rainy Evening Walk',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-autumn-landscape.webp',
-    title: 'Golden Marsh at Dusk',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-kerala-lamp.webp',
-    title: 'Evening Bliss',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-hot-air-balloons.jpg',
-    title: 'RadheKrishna',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-5.webp',
-    title: 'Hot Air Balloons',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-6.webp',
-    title: 'RadhaKrishna',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-7.webp',
-    title: 'Sunset over the Mountain',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-12.jpg',
-    title: 'Phoenix Rising',
-    artist: 'Oil on canvas board'
-  },
-  {
-    src: '/images/artwork-13.jpg',
-    title: 'Woodpecker',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-14.jpg',
-    title: 'Celebrate',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-15.jpg',
-    title: 'Last Flowers of the Season',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-16.jpg',
-    title: 'Voyaging at Sea',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-17.jpg',
-    title: 'Snowy Night',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-18.jpg',
-    title: 'Artwork 18',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-19.jpg',
-    title: 'Artwork 19',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-20.jpg',
-    title: 'Artwork 20',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-21.jpg',
-    title: 'Artwork 21',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-22.jpg',
-    title: 'Artwork 22',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-23.jpg',
-    title: 'Artwork 23',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-24.jpg',
-    title: 'Artwork 24',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-25.jpg',
-    title: 'Artwork 25',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-26.jpg',
-    title: 'Artwork 26',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-27.jpg',
-    title: 'Artwork 27',
-    artist: '(Description)'
-  },
-  {
-    src: '/images/artwork-28.jpg',
-    title: 'Artwork 28',
-    artist: '(Description)'
-  }
-];
+// The hero showcases the polished teacher works. Single source of truth — add
+// or reorder art in artworks.json and it flows through here automatically.
+const SLIDES = worksByCategory('teacher');
 
 export function GalleryCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
-  // Start with the unshuffled order so server and client markup match, then shuffle after mount
-  const [shuffledImages, setShuffledImages] = useState<ArtworkImage[]>(GALLERY_IMAGES);
   const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
   const isHoveredRef = useRef(false);
 
-  const count = shuffledImages.length;
+  const count = SLIDES.length;
 
   const goNext = () => setCurrentIndex((prev) => (prev + 1) % count);
   const goPrev = () => setCurrentIndex((prev) => (prev - 1 + count) % count);
-
-  useEffect(() => {
-    // One-time client-only shuffle to avoid SSR/client hydration mismatch
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setShuffledImages([...GALLERY_IMAGES].sort(() => Math.random() - 0.5));
-  }, []);
 
   // Keep ref in sync so the key handler never reads stale state
   useEffect(() => { isHoveredRef.current = isHovered; }, [isHovered]);
@@ -185,7 +53,8 @@ export function GalleryCarousel() {
 
   if (count === 0) return null;
 
-  const active = shuffledImages[currentIndex];
+  const active = SLIDES[currentIndex];
+  const activeCredit = credit(active);
 
   return (
     <div
@@ -193,7 +62,7 @@ export function GalleryCarousel() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {shuffledImages.map((image, index) => {
+      {SLIDES.map((art, index) => {
         const offset = index - currentIndex;
         const isActive = index === currentIndex;
         const isNext = offset === 1 || (currentIndex === count - 1 && index === 0);
@@ -203,7 +72,7 @@ export function GalleryCarousel() {
 
         return (
           <div
-            key={`${image.src}-${index}`}
+            key={art.image}
             className={`carousel-slide ${isActive ? 'active' : ''}`}
             style={{
               transform: `translateX(${offset * 100}%)`,
@@ -211,11 +80,11 @@ export function GalleryCarousel() {
               zIndex: isActive ? 2 : 1,
               cursor: isActive ? 'zoom-in' : 'default'
             }}
-            onClick={() => isActive && setLightbox({ src: image.src, alt: image.title })}
+            onClick={() => isActive && setLightbox({ src: art.image, alt: displayTitle(art) })}
           >
             <Image
-              src={image.src}
-              alt={image.title}
+              src={art.image}
+              alt={displayTitle(art)}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               style={{ objectFit: 'cover' }}
@@ -246,21 +115,19 @@ export function GalleryCarousel() {
 
       <div className="carousel-caption">
         <div className="caption-text">
-          <p className="caption-title">{active.title}</p>
-          {active.artist && active.artist !== '(Description)' && (
-            <p className="caption-medium">{active.artist}</p>
-          )}
+          <p className="caption-title">{displayTitle(active)}</p>
+          {activeCredit && <p className="caption-medium">{activeCredit}</p>}
         </div>
-        <div className="carousel-dots">
-          {shuffledImages.map((_, index) => (
-            <button
-              key={index}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={(e) => { e.stopPropagation(); setCurrentIndex(index); }}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+        <div className="carousel-counter" aria-live="polite">
+          {currentIndex + 1} / {count}
         </div>
+      </div>
+
+      <div className="carousel-progress" aria-hidden="true">
+        <span
+          className="carousel-progress-bar"
+          style={{ width: `${((currentIndex + 1) / count) * 100}%` }}
+        />
       </div>
 
       {lightbox && (
@@ -332,14 +199,14 @@ export function GalleryCarousel() {
           align-items: flex-end;
           justify-content: space-between;
           gap: 1rem;
-          padding: 1.4rem 1.1rem 0.95rem;
-          background: linear-gradient(to top, rgba(15, 12, 9, 0.62) 0%, rgba(15, 12, 9, 0) 100%);
+          padding: 1.6rem 1.2rem 1.1rem;
+          background: linear-gradient(to top, rgba(15, 12, 9, 0.68) 0%, rgba(15, 12, 9, 0) 100%);
           pointer-events: none;
         }
 
         .caption-title {
           font-family: 'Cormorant Garamond', Georgia, serif;
-          font-size: 1.45rem;
+          font-size: 1.5rem;
           font-weight: 600;
           color: #ffffff;
           margin: 0;
@@ -347,38 +214,38 @@ export function GalleryCarousel() {
         }
 
         .caption-medium {
-          font-size: 0.72rem;
+          font-size: 0.74rem;
           letter-spacing: 0.05em;
-          color: rgba(255, 255, 255, 0.82);
-          margin: 0.15rem 0 0;
+          color: rgba(255, 255, 255, 0.85);
+          margin: 0.25rem 0 0;
         }
 
-        .carousel-dots {
-          display: flex;
-          gap: 0.4rem;
-          pointer-events: auto;
+        .carousel-counter {
           flex-shrink: 0;
+          font-size: 0.78rem;
+          font-weight: 600;
+          letter-spacing: 0.06em;
+          color: rgba(255, 255, 255, 0.9);
+          font-variant-numeric: tabular-nums;
+          padding-bottom: 0.1rem;
         }
 
-        .dot {
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-          border: none;
-          background: rgba(255, 255, 255, 0.45);
-          cursor: pointer;
-          transition: all 0.3s ease;
-          padding: 0;
+        .carousel-progress {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 3px;
+          background: rgba(255, 255, 255, 0.22);
+          z-index: 4;
         }
 
-        .dot:hover {
-          background: rgba(255, 255, 255, 0.8);
-        }
-
-        .dot.active {
-          background: #22406b;
-          width: 20px;
-          border-radius: 4px;
+        .carousel-progress-bar {
+          display: block;
+          height: 100%;
+          background: var(--pop);
+          border-radius: 0 2px 2px 0;
+          transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
       `}</style>
     </div>

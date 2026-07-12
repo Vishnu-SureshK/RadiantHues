@@ -29,12 +29,8 @@ export function SiteHeader() {
             <li className="nav-auth">
               <Show when="signed-out">
                 {/* Log in takes existing students to the sign-in page. */}
-                <Link className="nav-link" href="/sign-in">
+                <Link className="button button-primary" href="/sign-in">
                   Log in
-                </Link>
-                {/* Sign up sends new students to the contact page to enroll. */}
-                <Link className="button button-primary" href="/contact">
-                  Sign up
                 </Link>
               </Show>
               <Show when="signed-in">

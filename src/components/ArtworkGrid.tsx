@@ -2,15 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { Lightbox } from "@/components/Lightbox";
-
-type Artwork = {
-  title: string;
-  image?: string;
-  medium: string;
-  year: string;
-};
+import { displayTitle, credit, type Artwork } from "@/content/artworks";
 
 type ArtworkGridProps = {
   items: Artwork[];
@@ -22,26 +15,31 @@ export function ArtworkGrid({ items }: ArtworkGridProps) {
   return (
     <>
       <div className="artwork-grid">
-        {items.map((item, index) => (
-          <article
-            className="art-card"
-            key={`${item.title}-${index}`}
-            onClick={() => item.image && setSelected({ src: item.image, alt: item.title })}
-            style={item.image ? { cursor: "zoom-in" } : undefined}
-          >
-            <div className="art-image-wrap">
-              {item.image ? (
-                <Image src={item.image} alt={item.title} fill sizes="(max-width: 960px) 100vw, 33vw" style={{ objectFit: "cover" }} />
-              ) : (
-                <MediaPlaceholder label={`${item.title} — add your image`} variant="card" />
-              )}
-            </div>
-            <div className="art-copy">
-              <h3>{item.title}</h3>
-              <p>{item.medium}{item.year ? ` · ${item.year}` : ""}</p>
-            </div>
-          </article>
-        ))}
+        {items.map((item, index) => {
+          const line = credit(item);
+          return (
+            <article
+              className="art-card"
+              key={`${item.image}-${index}`}
+              onClick={() => setSelected({ src: item.image, alt: displayTitle(item) })}
+              style={{ cursor: "zoom-in" }}
+            >
+              <div className="art-image-wrap">
+                <Image
+                  src={item.image}
+                  alt={displayTitle(item)}
+                  fill
+                  sizes="(max-width: 960px) 100vw, 33vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <div className="art-copy">
+                <h3>{displayTitle(item)}</h3>
+                <p>{line || "Details coming soon"}</p>
+              </div>
+            </article>
+          );
+        })}
       </div>
 
       {selected && (

@@ -46,7 +46,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section panel">
+      <section className="section featured-section">
         <div className="container">
           <SectionHeading
             title="Featured Works"
@@ -58,7 +58,7 @@ export default function HomePage() {
 
       <KeralaPattern />
 
-      <section className="section panel">
+      <section className="section">
         <div className="container">
           <SectionHeading
             title={
@@ -86,7 +86,7 @@ export default function HomePage() {
 
       <KeralaPattern />
 
-      <section className="section feature-band panel">
+      <section className="section feature-band">
         <div className="container feature-grid">
           <div className="feature-visual">
             <Image

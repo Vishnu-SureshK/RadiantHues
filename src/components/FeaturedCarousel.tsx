@@ -1,49 +1,111 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
-import { galleryCollections } from "@/content/siteContent";
-import { imageAspects } from "@/content/imageAspects";
+import { Lightbox } from "@/components/Lightbox";
+import {
+  categoryOrder,
+  categoryMeta,
+  worksByCategory,
+  aspectOf,
+  displayTitle,
+  credit,
+  type Artwork,
+  type Category,
+} from "@/content/artworks";
 
-type Artwork = {
-  title: string;
-  image?: string;
-  medium: string;
-  year: string;
-};
+// Repeat a list until it has at least `min` items, so short showcases still
+// scroll continuously instead of leaving a gap.
+function fill<T>(items: T[], min: number): T[] {
+  if (items.length === 0) return items;
+  const out: T[] = [];
+  while (out.length < min) out.push(...items);
+  return out;
+}
 
-// Every gallery artwork that has an image, with its aspect ratio so each slide
-// can reserve the right width (same height, different widths — no layout jank).
-const IMAGES = (galleryCollections.flatMap((c) => c.works) as Artwork[])
-  .filter((w) => Boolean(w.image))
-  .map((w) => ({
-    src: w.image as string,
-    title: w.title,
-    ar: imageAspects[w.image as string] ?? 1.4,
-  }));
+type Selection = { src: string; alt: string };
 
-export function FeaturedCarousel() {
-  // Duplicate the set so translateX(-50%) loops seamlessly.
-  const loop = [...IMAGES, ...IMAGES];
+function ShowcaseRow({
+  category,
+  reverse,
+  onSelect,
+}: {
+  category: Category;
+  reverse: boolean;
+  onSelect: (s: Selection) => void;
+}) {
+  const works = worksByCategory(category);
+  if (works.length === 0) return null;
+
+  // `base` fills the row; the track renders it twice so translateX(-50%) loops
+  // seamlessly. Duration scales with item count to keep a constant glide speed.
+  const base = fill(works, 8);
+  const loop = [...base, ...base];
+  const duration = base.length * 5.5;
+
+  const renderItem = (art: Artwork, i: number) => {
+    const isClone = i >= base.length;
+    return (
+      <button
+        type="button"
+        className="marquee-item"
+        key={`${art.image}-${i}`}
+        style={{ aspectRatio: String(aspectOf(art.image)) }}
+        aria-hidden={isClone ? true : undefined}
+        tabIndex={isClone ? -1 : 0}
+        onClick={() => onSelect({ src: art.image, alt: displayTitle(art) })}
+      >
+        <Image
+          src={art.image}
+          alt={displayTitle(art)}
+          fill
+          loading={i < 4 ? "eager" : "lazy"}
+          sizes="(max-width: 768px) 60vw, 22rem"
+          style={{ objectFit: "cover" }}
+        />
+        <span className="marquee-caption">
+          <span className="mi-title">{displayTitle(art)}</span>
+          {credit(art) && <span className="mi-credit">{credit(art)}</span>}
+        </span>
+      </button>
+    );
+  };
 
   return (
-    <div className="marquee" aria-label="Featured artworks">
-      <div className="marquee-track">
-        {loop.map((art, i) => (
-          <div
-            className="marquee-item"
-            key={`${art.src}-${i}`}
-            style={{ aspectRatio: String(art.ar) }}
-            aria-hidden={i >= IMAGES.length ? true : undefined}
-          >
-            <Image
-              src={art.src}
-              alt={art.title}
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 60vw, 28rem"
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        ))}
+    <div className="showcase-row">
+      <div className="container showcase-head">
+        <h3>{categoryMeta[category].label}</h3>
+        <p>{categoryMeta[category].description}</p>
       </div>
+      <div className="marquee">
+        <div
+          className={`marquee-track ${reverse ? "reverse" : ""}`}
+          style={{ animationDuration: `${duration}s` }}
+        >
+          {loop.map(renderItem)}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function FeaturedCarousel() {
+  const [selected, setSelected] = useState<Selection | null>(null);
+
+  return (
+    <div className="featured-rows">
+      {categoryOrder.map((cat, idx) => (
+        <ShowcaseRow
+          key={cat}
+          category={cat}
+          reverse={idx % 2 === 1}
+          onSelect={setSelected}
+        />
+      ))}
+
+      {selected && (
+        <Lightbox src={selected.src} alt={selected.alt} onClose={() => setSelected(null)} />
+      )}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArtworkGrid } from "@/components/ArtworkGrid";
 import { SectionHeading } from "@/components/SectionHeading";
-import { galleryCollections } from "@/content/siteContent";
+import { categoryOrder, categoryMeta, worksByCategory } from "@/content/artworks";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -28,10 +28,10 @@ export default function GalleryPage() {
           />
         </div>
 
-        {galleryCollections.map((collection) => (
-          <div className="collection" key={collection.name}>
-            <SectionHeading title={collection.name} intro={collection.description} />
-            <ArtworkGrid items={collection.works} />
+        {categoryOrder.map((cat) => (
+          <div className="collection" key={cat}>
+            <SectionHeading title={categoryMeta[cat].label} intro={categoryMeta[cat].description} />
+            <ArtworkGrid items={worksByCategory(cat)} />
           </div>
         ))}
       </div>
