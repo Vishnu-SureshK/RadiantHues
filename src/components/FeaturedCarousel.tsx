@@ -37,6 +37,7 @@ export function FeaturedCarousel() {
               src={art.src}
               alt={art.title}
               fill
+              loading="eager"
               sizes="(max-width: 768px) 60vw, 28rem"
               style={{ objectFit: "cover" }}
             />

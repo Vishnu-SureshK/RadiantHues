@@ -973,21 +973,14 @@ h1 {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 55s linear infinite;
-}
-
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
+  animation: marquee-scroll 68.75s linear infinite;
 }
 
 .marquee-item {
   position: relative;
   height: 18rem;
   flex: 0 0 auto;
-  margin-right: 1.25rem;
-  border-radius: 0.4rem;
   overflow: hidden;
-  border: 1px solid var(--border);
   box-shadow: 0 10px 24px rgb(34 28 21 / 8%);
   background: var(--surface);
 }
@@ -1010,7 +1003,6 @@ h1 {
 @media (max-width: 768px) {
   .marquee-item {
     height: 12rem;
-    margin-right: 0.85rem;
   }
 }
 
