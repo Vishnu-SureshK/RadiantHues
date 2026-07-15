@@ -129,7 +129,9 @@ if (added.length) {
 }
 
 // 3) Report
-const incomplete = artworks.filter((a) => !(a.artist?.trim() && a.medium?.trim() && a.size?.trim()));
+const incomplete = artworks.filter(
+  (a) => !(a.description?.trim() || (a.artist?.trim() && a.medium?.trim() && a.size?.trim())),
+);
 
 console.log(`\nRadiant Hues art sync`);
 console.log(`  images measured : ${Object.keys(aspects).length}`);

@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "art": "node scripts/sync-art.mjs"
+    "art": "node scripts/sync-art.mjs",
+    "push": "node scripts/push.mjs"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.5.12",

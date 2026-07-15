@@ -13,6 +13,10 @@ export type Artwork = {
   medium: string;
   size: string;
   category: Category;
+  // Optional free-form caption. When set, it's shown verbatim under the title
+  // (overriding the artist/medium/size credit). Handy for one-line descriptions
+  // like "Kerala Mural Painting - Acrylic on Canvas - Gayathri Suresh".
+  description?: string;
 };
 
 export const artworks = data as Artwork[];
@@ -45,9 +49,10 @@ export function aspectOf(image: string): number {
   return imageAspects[image] ?? 1.4;
 }
 
-// An artwork is "complete" once all three credit fields are filled in.
-// Incomplete ones still display — they just show what's available.
+// An artwork is "complete" when it has a description, or all three credit
+// fields. Incomplete ones still display — they just show what's available.
 export function isComplete(a: Artwork): boolean {
+  if (a.description?.trim()) return true;
   return Boolean(a.artist.trim() && a.medium.trim() && a.size.trim());
 }
 
@@ -55,8 +60,10 @@ export function displayTitle(a: Artwork): string {
   return a.title.trim() || "Untitled";
 }
 
-// One-line credit under a title, e.g. "Gayathri Suresh · Oil on canvas · 24 × 36 in".
+// One-line caption under a title. A free-form `description` wins; otherwise
+// build it from artist/medium/size, e.g. "Gayathri Suresh · Oil on canvas · 24 × 36 in".
 export function credit(a: Artwork): string {
+  if (a.description?.trim()) return a.description.trim();
   return [a.artist, a.medium, a.size]
     .map((p) => p.trim())
     .filter(Boolean)
