@@ -647,7 +647,7 @@ h1 {
 
 /* Structured, scannable class details — one labeled row per fact. */
 .class-details {
-  margin: 0 0 1.75rem;
+  margin: 1rem 0 1.75rem;
 }
 
 .class-details > div {
@@ -850,7 +850,8 @@ h1 {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   border: 1px solid var(--border);
   border-radius: 0.6rem;
   padding: 0.75rem 0.85rem;
@@ -862,7 +863,8 @@ h1 {
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form select:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgb(30 90 84 / 14%);
@@ -870,8 +872,20 @@ h1 {
 }
 
 .contact-form input:hover,
-.contact-form textarea:hover {
+.contact-form textarea:hover,
+.contact-form select:hover {
   border-color: rgb(30 90 84 / 45%);
+}
+
+/* Custom chevron so the dropdown matches the inputs across browsers. */
+.contact-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 2.4rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23776c56' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
 }
 
 .hidden-honeypot {

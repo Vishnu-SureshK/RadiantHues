@@ -65,7 +65,6 @@ export default function HomePage() {
             {classes.map((item) => (
               <article className="class-card" key={item.title}>
                 <h3>{item.title}</h3>
-                <p className="class-body">{item.body}</p>
                 <dl className="class-details">
                   {item.details.map((detail) => (
                     <div key={detail.label}>

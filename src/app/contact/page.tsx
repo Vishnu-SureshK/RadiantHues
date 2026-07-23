@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { classes } from "@/content/siteContent";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -51,6 +52,16 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
 
           <label htmlFor="phone">Phone Number</label>
           <input id="phone" name="phone" />
+
+          <label htmlFor="classInterest">Class of Interest</label>
+          <select id="classInterest" name="classInterest" defaultValue="">
+            <option value="">Select a class (optional)</option>
+            {classes.map((item) => (
+              <option key={item.title} value={item.title}>
+                {item.title}
+              </option>
+            ))}
+          </select>
 
           <label htmlFor="message">Message</label>
           <textarea id="message" name="message" rows={6} required />

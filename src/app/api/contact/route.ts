@@ -11,6 +11,7 @@ export async function POST(request: Request) {
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const phone = String(formData.get("phone") ?? "").trim();
+  const classInterest = String(formData.get("classInterest") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
   const website = String(formData.get("website") ?? "").trim();
 
@@ -35,7 +36,7 @@ export async function POST(request: Request) {
     to,
     reply_to: email,
     subject: `Radiant Hues Inquiry from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\n\n${message}`
+    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\nClass of interest: ${classInterest || "Not specified"}\n\n${message}`
   };
 
   try {

@@ -31,7 +31,6 @@ export const stats = [
 export const classes = [
   {
     title: "Kids",
-    body: "Young artists learn to really see—drawing, mixing color, and painting—in small, encouraging groups. Building confidence matters as much as technique, and everyone leaves with work they're proud of.",
     details: [
       { label: "Ages", value: "5 and up" },
       { label: "Format", value: "Small in-person groups" },
@@ -40,7 +39,6 @@ export const classes = [
   },
   {
     title: "Adults",
-    body: "Whether you're picking up a brush for the first time or returning after years away, you'll learn real techniques at your own pace—and can bring your own idea, photo, or memory to turn into a finished piece.",
     details: [
       { label: "Levels", value: "Beginner to experienced" },
       { label: "Mediums", value: "Watercolor, acrylic, oil & more" },
@@ -50,7 +48,6 @@ export const classes = [
   },
   {
     title: "Zoom Classes",
-    body: "Can't make it to the studio? Join live over Zoom and get the same step-by-step guidance and personal feedback—from wherever you are.",
     details: [
       { label: "Format", value: "Live online via Zoom" },
       { label: "Guidance", value: "Same as in-studio" },
