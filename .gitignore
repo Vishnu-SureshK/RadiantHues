@@ -12,6 +12,9 @@
 .DS_Store
 *.pem
 
+# pristine artwork originals (un-watermarked) — kept locally, never published
+/art-source
+
 # debug
 npm-debug.log*
 yarn-debug.log*

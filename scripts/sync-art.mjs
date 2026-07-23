@@ -18,6 +18,11 @@
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join, extname } from "node:path";
+import { watermarkAll } from "./watermark.mjs";
+
+// Bake the @RadiantHues watermark into any new images first, so everything the
+// site serves is protected. (Idempotent — already-watermarked images are skipped.)
+await watermarkAll();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");

@@ -27,7 +27,7 @@ export const categoryOrder: Category[] = ["teacher", "adult", "child"];
 export const categoryMeta: Record<Category, { label: string; description: string }> = {
   teacher: {
     label: "Teacher Showcase",
-    description: "Kerala-inspired works celebrating landscapes, festivals, and devotional art.",
+    description: "",
   },
   adult: {
     label: "Adult Student Showcase",
@@ -41,6 +41,16 @@ export const categoryMeta: Record<Category, { label: string; description: string
 
 export function worksByCategory(category: Category): Artwork[] {
   return artworks.filter((a) => a.category === category);
+}
+
+// Stable, unique URL slug for an artwork's detail page, derived from its image
+// filename (e.g. "/images/artwork-12.jpg" -> "artwork-12").
+export function slugFor(a: Artwork): string {
+  return a.image.replace(/^\/images\//, "").replace(/\.[^.]+$/, "");
+}
+
+export function bySlug(slug: string): Artwork | undefined {
+  return artworks.find((a) => slugFor(a) === slug);
 }
 
 // Aspect ratio (width / height) used to reserve each slide's width in the

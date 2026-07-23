@@ -9,6 +9,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "art": "node scripts/sync-art.mjs",
+    "watermark": "node scripts/watermark.mjs",
+    "watermark:check": "node scripts/watermark.mjs --check",
     "push": "node scripts/push.mjs"
   },
   "dependencies": {

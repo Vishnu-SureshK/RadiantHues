@@ -32,7 +32,7 @@ export default async function ManageLessonsPage() {
               Upload PDFs, images, and notes for each class. Students will see
               these on their Lessons page.
             </p>
-            <span className="class-detail">Coming soon</span>
+            <span className="class-status">Coming soon</span>
           </div>
 
           <div className="class-card">
@@ -40,7 +40,7 @@ export default async function ManageLessonsPage() {
             <p className="class-body">
               See who has signed up and manage access to your lessons.
             </p>
-            <span className="class-detail">Coming soon</span>
+            <span className="class-status">Coming soon</span>
           </div>
 
           <div className="class-card">
@@ -49,7 +49,7 @@ export default async function ManageLessonsPage() {
               Group materials by class or level so the right students see the
               right lessons.
             </p>
-            <span className="class-detail">Coming soon</span>
+            <span className="class-status">Coming soon</span>
           </div>
         </div>
 

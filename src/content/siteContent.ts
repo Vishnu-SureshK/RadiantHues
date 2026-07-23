@@ -31,18 +31,31 @@ export const stats = [
 export const classes = [
   {
     title: "Kids",
-    body: "Playful group classes where young artists build confidence with color, drawing, and painting.",
-    detail: "Ages · schedule · skill level — add details"
+    body: "Young artists learn to really see—drawing, mixing color, and painting—in small, encouraging groups. Building confidence matters as much as technique, and everyone leaves with work they're proud of.",
+    details: [
+      { label: "Ages", value: "5 and up" },
+      { label: "Format", value: "Small in-person groups" },
+      { label: "Focus", value: "Drawing, color & painting basics" }
+    ]
   },
   {
     title: "Adults",
-    body: "Relaxed classes for beginners and hobbyists to learn real techniques at their own pace.",
-    detail: "Mediums · group size · schedule — add details"
+    body: "Whether you're picking up a brush for the first time or returning after years away, you'll learn real techniques at your own pace—and can bring your own idea, photo, or memory to turn into a finished piece.",
+    details: [
+      { label: "Levels", value: "Beginner to experienced" },
+      { label: "Mediums", value: "Watercolor, acrylic, oil & more" },
+      { label: "Mornings", value: "10:30 AM – 12:15 PM" },
+      { label: "Evenings", value: "Tue, Wed & Thu · 7:00 – 9:00 PM" }
+    ]
   },
   {
-    title: "Private 1:1",
-    body: "One-on-one sessions tailored to your goals, from a single skill to portfolio prep.",
-    detail: "Format · duration · rates — add details"
+    title: "Zoom Classes",
+    body: "Can't make it to the studio? Join live over Zoom and get the same step-by-step guidance and personal feedback—from wherever you are.",
+    details: [
+      { label: "Format", value: "Live online via Zoom" },
+      { label: "Guidance", value: "Same as in-studio" },
+      { label: "Schedule", value: "Flexible — by arrangement" }
+    ]
   }
 ];
 

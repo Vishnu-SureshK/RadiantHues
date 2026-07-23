@@ -2,7 +2,6 @@ import Link from "next/link";
 import { FeaturedCarousel } from "@/components/FeaturedCarousel";
 import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
-import { KeralaPattern } from "@/components/KeralaPattern";
 import { GalleryCarousel } from "@/components/GalleryCarousel";
 import { heroContent, stats, classes } from "@/content/siteContent";
 
@@ -56,35 +55,33 @@ export default function HomePage() {
         <FeaturedCarousel />
       </section>
 
-      <KeralaPattern />
-
       <section className="section">
         <div className="container">
           <SectionHeading
-            title={
-              <>
-                Classes for <span className="accent-azure">every</span>{" "}
-                <span className="accent-gold">age</span>
-              </>
-            }
-            intro="Group and private lessons in Naperville. Replace this with your class details, schedule, and pricing."
+            title="Classes for every age"
+            intro="Small, encouraging classes for kids and adults—in-person in Naperville or live online. Learn real techniques and leave with a finished piece you're proud of."
           />
           <div className="class-grid">
             {classes.map((item) => (
               <article className="class-card" key={item.title}>
                 <h3>{item.title}</h3>
                 <p className="class-body">{item.body}</p>
-                <p className="class-detail">{item.detail}</p>
-                <Link className="class-link" href="/contact">
-                  Book a class →
+                <dl className="class-details">
+                  {item.details.map((detail) => (
+                    <div key={detail.label}>
+                      <dt>{detail.label}</dt>
+                      <dd>{detail.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <Link className="button button-secondary class-cta" href="/contact">
+                  Book a class
                 </Link>
               </article>
             ))}
           </div>
         </div>
       </section>
-
-      <KeralaPattern />
 
       <section className="section feature-band">
         <div className="container feature-grid">
@@ -99,13 +96,7 @@ export default function HomePage() {
           </div>
           <div>
             <SectionHeading
-              title={
-                <>
-                  Where Tradition Meets{" "}
-                  <span className="accent-azure">Contemporary</span>{" "}
-                  <span className="accent-gold">Learning</span>
-                </>
-              }
+              title="Where tradition meets contemporary learning"
               intro="From temple tones and monsoon skies to floral vibrancy and festive symbolism—each lesson celebrates technique and cultural storytelling."
             />
           </div>

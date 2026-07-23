@@ -75,7 +75,7 @@ function ShowcaseRow({
     <div className="showcase-row">
       <div className="container showcase-head">
         <h3>{categoryMeta[category].label}</h3>
-        <p>{categoryMeta[category].description}</p>
+        {categoryMeta[category].description && <p>{categoryMeta[category].description}</p>}
       </div>
       <div className="marquee">
         <div
