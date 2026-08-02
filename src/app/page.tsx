@@ -95,9 +95,12 @@ export default function HomePage() {
           </div>
           <div>
             <SectionHeading
-              title="Where tradition meets contemporary learning"
-              intro="From temple tones and monsoon skies to floral vibrancy and festive symbolism—each lesson celebrates technique and cultural storytelling."
+              title="Custom Framing for your Art"
+              intro="Every finished piece deserves the right frame. We offer custom framing for student and commissioned artworks—choose a style that suits your space, and we'll take care of the rest."
             />
+            <Link className="button button-secondary" href="/contact">
+              Ask about framing
+            </Link>
           </div>
         </div>
       </section>

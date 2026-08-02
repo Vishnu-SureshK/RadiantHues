@@ -398,17 +398,6 @@ h1 {
   margin-top: 4rem;
 }
 
-.framing-note {
-  margin: 0 0 1.75rem;
-  padding: 0.9rem 1.15rem;
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--primary);
-  border-radius: 0.4rem;
-  background: var(--surface);
-  color: var(--text-secondary);
-  font-size: 0.98rem;
-}
-
 /* Artwork detail page — image above the details, single scrolling column */
 .artwork-detail {
   max-width: 760px;

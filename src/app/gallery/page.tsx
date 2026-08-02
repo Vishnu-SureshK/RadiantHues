@@ -19,11 +19,6 @@ export default function GalleryPage() {
 
         {categoryOrder.map((cat) => (
           <div className="collection" key={cat}>
-            {cat === "adult" && (
-              <p className="framing-note">
-                Custom framing is available for all student artworks—just ask.
-              </p>
-            )}
             <SectionHeading title={categoryMeta[cat].label} intro={categoryMeta[cat].description} />
             <ArtworkGrid items={worksByCategory(cat)} />
           </div>

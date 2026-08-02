@@ -63,6 +63,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             ))}
           </select>
 
+          <label htmlFor="paintingSize">Painting Size (for custom framing)</label>
+          <input id="paintingSize" name="paintingSize" placeholder="e.g. 16 × 20 in — optional" />
+
           <label htmlFor="message">Message</label>
           <textarea id="message" name="message" rows={6} required />
 
