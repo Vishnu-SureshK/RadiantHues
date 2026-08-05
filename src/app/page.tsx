@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FeaturedCarousel } from "@/components/FeaturedCarousel";
-import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
 import { GalleryCarousel } from "@/components/GalleryCarousel";
 import { heroContent, stats, classes } from "@/content/siteContent";
@@ -55,7 +54,7 @@ export default function HomePage() {
         <FeaturedCarousel />
       </section>
 
-      <section className="section">
+      <section className="section classes-section">
         <div className="container">
           <SectionHeading
             title="Classes for every age"
@@ -78,29 +77,6 @@ export default function HomePage() {
                 </Link>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section feature-band">
-        <div className="container feature-grid">
-          <div className="feature-visual">
-            <Image
-              src="/images/artwork-20.jpg"
-              alt="Ganesha and elephants — traditional Indian mural triptych"
-              fill
-              sizes="(max-width: 960px) 100vw, 45vw"
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-          <div>
-            <SectionHeading
-              title="Custom Framing for your Art"
-              intro="Every finished piece deserves the right frame. We offer custom framing for student and commissioned artworks—choose a style that suits your space, and we'll take care of the rest."
-            />
-            <Link className="button button-secondary" href="/contact">
-              Ask about framing
-            </Link>
           </div>
         </div>
       </section>

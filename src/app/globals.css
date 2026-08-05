@@ -669,6 +669,32 @@ h1 {
   align-self: flex-start;
 }
 
+/* Home "Classes for every age" section: center the contents of each class card
+   (title, details, button) and give cards a blue underglow on hover. The
+   section heading/intro keep their default left alignment. Scoped so other
+   .class-card instances (admin) stay unaffected. */
+.classes-section .class-card {
+  text-align: center;
+}
+
+.classes-section .class-details > div {
+  display: block;
+  text-align: center;
+}
+
+.classes-section .class-details dd {
+  margin-top: 0.15rem;
+}
+
+.classes-section .class-cta {
+  align-self: center;
+}
+
+.classes-section .class-card:hover {
+  border-color: var(--pop);
+  box-shadow: 0 14px 30px -8px rgba(34, 64, 107, 0.45);
+}
+
 /* Small status badge (e.g. "Coming soon") used on the admin cards. */
 .class-status {
   margin-top: auto;

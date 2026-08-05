@@ -31,11 +31,11 @@ export const categoryMeta: Record<Category, { label: string; description: string
   },
   adult: {
     label: "Adult Student Showcase",
-    description: "Beginners and returning artists bringing their own ideas to life.",
+    description: "",
   },
   child: {
     label: "Kid Student Showcase",
-    description: "Young artists building skills and confidence—one colorful piece at a time.",
+    description: "",
   },
 };
 
