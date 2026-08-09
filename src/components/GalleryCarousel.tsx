@@ -3,11 +3,12 @@
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { Lightbox } from '@/components/Lightbox';
-import { worksByCategory, displayTitle, credit } from '@/content/artworks';
+import { artworks, displayTitle, credit } from '@/content/artworks';
 
-// The hero showcases the polished teacher works. Single source of truth — add
-// or reorder art in artworks.json and it flows through here automatically.
-const SLIDES = worksByCategory('teacher');
+// The hero slideshow shows every artwork (teacher + student, all categories).
+// Single source of truth — any art added to artworks.json flows through here
+// and the Featured Works carousels automatically.
+const SLIDES = artworks;
 
 export function GalleryCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
